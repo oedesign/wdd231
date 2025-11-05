@@ -15,6 +15,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px;
 }
 
 .logo-name {
@@ -59,6 +60,43 @@ nav {
 .nav-links a:hover,
 .nav-links a.active {
     background-color: #666;
+}
+
+/* main */
+
+main {
+    padding: 10px;
+}
+
+.main-con {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+    gap: 10px;
+    height: 400px;
+}
+
+.about-me {
+    border: 1px solid;
+}
+
+.about-me p {
+    padding: 10px;
+}
+
+.my-photo {
+    border: 1px solid;
+}
+
+.my-photo img {
+    display: block;
+    margin: 20px auto;
+}
+
+h3 {
+   background-color: #222;
+   color: white;
+   text-align: center;
 }
 
 /* Responsive Menu */
