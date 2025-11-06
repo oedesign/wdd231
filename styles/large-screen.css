@@ -7,8 +7,8 @@
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #f4f4f4; /* light */
+    color: #222; /* dark */
 }
 
 header {
@@ -156,20 +156,3 @@ footer {
     color: black;
 }
 
-/* Responsive Menu */
-@media (max-width: 868px) {
-    .icon {
-        display: block;
-    }
-    .nav-links {
-        flex-direction: column;
-        display: none;
-    }
-    .courses {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    margin-top: 5px;
-    gap: 10px;
-}
-
-}

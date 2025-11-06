@@ -1,0 +1,16 @@
+@media (max-width: 868px) {
+    .icon {
+        display: block;
+    }
+    .nav-links {
+        flex-direction: column;
+        display: none;
+    }
+    .courses {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin-top: 5px;
+    gap: 10px;
+}
+
+}
