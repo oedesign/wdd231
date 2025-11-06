@@ -103,6 +103,39 @@ main h2 {
     top: 20px;
 }
 
+.module {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-top: 5px;
+    gap: 5px;
+}
+
+.all, .cse, .wdd {
+    border: 1px solid;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.courses {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-top: 5px;
+    gap: 10px;
+}
+
+.web-courses p {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.wdd130, .wdd131, .wdd231 {
+    border: 1px solid;
+    text-align: center;
+    padding: 2px;
+}
+
 footer {
     text-align: center;
     padding: 10px;
@@ -121,5 +154,11 @@ footer {
         flex-direction: column;
         display: none;
     }
+    .courses {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin-top: 5px;
+    gap: 10px;
+}
 
 }
