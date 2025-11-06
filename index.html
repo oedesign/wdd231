@@ -47,22 +47,26 @@
             <img src="images/profile.webp" alt="Oluwaseyi Elujoba Photo" width="300">
         </section>
     </div>
-        <section class="web-courses">
-            <h2>Web Certificate Courses</h2>
-            <div class="web-cses">
-                <div class="module">
-                <div class="all">All</div>
-                <div class="cse">CSE</div>
-                <div class="wdd">WDD</div>
-                </div>
-                <div class="courses">
-                <div class="wdd130">WDD130</div>
-                <div class="wdd131">WDD131</div>
-                <div class="wdd231">WDD231</div>
-                </div>
-                <p>The total credits for this course listed above is 6</p>
+    <div class="container">
+    <h2>Web Certificate Courses</h2>
+
+    <div class="filters" role="tablist" aria-label="Course filters">
+      <button data-subject="ALL" class="active">All</button>
+      <button data-subject="CSE">CSE</button>
+      <button data-subject="WDD">WDD</button>
+    </div>
+
+    <section class="certificate" aria-live="polite">
+        <div id="courses" class="course-list" aria-label="Course list">
+                <!-- JS will inject course cards here -->
             </div>
-        </section>
+
+            <div class="credits-row">
+                <div class="note">The total credits for courses listed above is</div>
+                <div class="total" id="totalCredits">0</div>
+            </div>
+            </section>
+        </div>
    </main>
    <footer>
     <div class="socia-link">
