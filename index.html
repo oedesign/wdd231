@@ -7,43 +7,35 @@
     <meta name="description" content="OE Design portfolio for WDD 231 — front-end projects, coursework, and personal web design samples showcasing skills in HTML, CSS, and JavaScript.">
     <meta name="author" content="Oluwaseyi Elujoba">
     <meta name="keywords" content="OE Design, WDD 231, Web Design, Portfolio">
-    <link rel="canonical" href="https://example.com/" />
     <!-- favicon -->
     <link rel="icon" type="image/png" href="images/oe-design.ico">
-    <!-- Google fonts (preconnect already present) -->
+    <!-- css -->
+     <link rel="stylesheet" href="styles/large-screen.css">
+     <link rel="stylesheet" href="styles/styles.css">
+     <!-- script -->
+      <script src="scripts/scripts.js" defer></script>
+     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap" rel="stylesheet">
-    <!-- local script deferred (kept at head but deferred) -->
-     <link rel="stylesheet" href="styles/large-screen.css" />
-    <link rel="stylesheet" href="styles/styles.css" />
-    <script src="scripts/scripts.js" defer></script>
-    <style>
-    /* ===== Accessibility-focused baseline styles ===== */
-   
-    </style>
 </head>
 <body>
-    <!-- Skip link helps keyboard & screen-reader users jump to main content -->
-    <a class="skip-link" href="#main">Skip to main content</a>
    <header>
     <div class="logo-name">
-        <img src="images/oedesign-logo.webp" alt="OE Design logo" width="50" height="50">
-        <!-- p-name is not a heading to avoid duplicate h1; link goes to homepage -->
-        <span class="p-name"><a href="index.html" aria-label="Go to homepage">OE Design</a></span>
+        <img src="images/oedesign-logo.webp" alt="OE Design Logo" width="50">
+        <span class="p-name">OE Design</span>
     </div>
-    <!-- accessibility: button with aria-expanded and aria-controls -->
-    <button id="toggleIcon" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation">☰</button>
+    <div id="toggleIcon" class="icon">☰</div>
    </header>
-   <nav id="main-nav">
-    <ul class="nav-links" role="menubar">
-        <li role="none"><a role="menuitem" class="active" href="index.html">Home</a></li>
-        <li role="none"><a role="menuitem" href="#">Chamber Project</a></li>
-        <li role="none"><a role="menuitem" href="portfolio.html">Final Project</a></li>
-        <li role="none"><a role="menuitem" href="#">Contact</a></li>
+   <nav>
+    <ul class="nav-links">
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="#">Chamber Project</a></li>
+        <li><a href="portfolio.html">Final Project</a></li>
+        <li><a href="#">Contact</a></li>
     </ul>
    </nav>
-   <main id="main">
+   <main>
     <h1>Home</h1>
     <div class="abt-mp">
         <section class="about-me">
@@ -52,22 +44,22 @@
         </section>
         <section class="my-photo">
             <h2>My Photo</h2>
-            <img src="images/profile.webp" alt="Photo of Oluwaseyi Elujoba" width="300" height="300" loading="lazy">
+            <img src="images/profile.webp" alt="Oluwaseyi Elujoba Photo" width="300">
         </section>
     </div>
     <div class="container">
     <h2>Web Certificate Courses</h2>
 
     <div class="filters" role="tablist" aria-label="Course filters">
-      <button data-subject="ALL" class="active" role="tab" aria-selected="true">All</button>
-      <button data-subject="CSE" role="tab" aria-selected="false">CSE</button>
-      <button data-subject="WDD" role="tab" aria-selected="false">WDD</button>
+      <button data-subject="ALL" class="active">All</button>
+      <button data-subject="CSE">CSE</button>
+      <button data-subject="WDD">WDD</button>
     </div>
 
     <section class="certificate" aria-live="polite">
-        <h2 id="courses" class="course-list" role="list" aria-label="Course list">
+        <div id="courses" class="course-list" aria-label="Course list">
                 <!-- JS will inject course cards here -->
-            </h2>
+            </div>
 
             <div class="credits-row">
                 <div class="note">The total credits for courses listed above is</div>
@@ -77,19 +69,15 @@
         </div>
    </main>
    <footer>
-    <div class="socia-link" aria-label="Social links">
-        <!-- If these are real links, wrap them in <a href> with rel attributes -->
-        <a href="#" aria-label="LinkedIn (opens in new tab)" target="_blank" rel="noopener noreferrer"><img src="images/linkedln.svg" alt="LinkedIn logo" width="60" height="60"></a>
-        <a href="#" aria-label="GitHub (opens in new tab)" target="_blank" rel="noopener noreferrer"><img src="images/github.svg" alt="GitHub logo" width="60" height="60"></a>
-        <a href="#" aria-label="Twitter (opens in new tab)" target="_blank" rel="noopener noreferrer"><img src="images/twitter.svg" alt="Twitter logo" width="60" height="60"></a>
+    <div class="socia-link">
+        <img src="images/linkedln.svg" alt="linkedln" width="60">
+        <img src="images/github.svg" alt="github" width="60">
+        <img src="images/twitter.svg" alt="twitter" width="60">
     </div>
     <div class="copy-right-date">
         <p>&copy;<span id="currentyear"></span> - Oluwaseyi Elujoba - Lagos, Nigeria</p>
         <p id="lastModified"></p>
     </div>
    </footer>
-   <script>
-    
-   </script>
 </body>
 </html>
