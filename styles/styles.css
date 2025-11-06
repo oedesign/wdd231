@@ -18,6 +18,12 @@ header {
     padding: 10px;
 }
 
+.p-name {
+    font-weight: bold;
+    font-size: 24px;
+    cursor: pointer;
+}
+
 .logo-name {
     display: flex;
     align-items: center;
@@ -142,7 +148,7 @@ footer {
     /* background-color: #222; */
     color: white;
     position: relative;
-    top: 100px;
+    top: 40px;
 }
 
 .copy-right-date {
