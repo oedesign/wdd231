@@ -138,11 +138,17 @@ main h2 {
 
 footer {
     text-align: center;
-    padding: 10px;
-    background-color: #222;
+    /* padding: 10px; */
+    /* background-color: #222; */
     color: white;
     position: relative;
     top: 100px;
+}
+
+.copy-right-date {
+    padding: 10px;
+    background-color: lightgray;
+    color: black;
 }
 
 /* Responsive Menu */
