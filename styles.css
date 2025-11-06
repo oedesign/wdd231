@@ -68,11 +68,11 @@ main {
     padding: 10px;
 }
 
-.main-con {
+.abt-mp {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 10px;
-    height: 400px;
+    /* height: 400px; */
 }
 
 .about-me {
@@ -92,14 +92,28 @@ main {
     margin: 20px auto;
 }
 
-h3 {
+main h2 {
    background-color: #222;
    color: white;
    text-align: center;
 }
 
+.web-courses {
+    position: relative;
+    top: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #222;
+    color: white;
+    position: relative;
+    top: 100px;
+}
+
 /* Responsive Menu */
-@media (max-width: 768px) {
+@media (max-width: 868px) {
     .icon {
         display: block;
     }
