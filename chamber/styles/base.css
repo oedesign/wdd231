@@ -1,0 +1,119 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+
+    --Primary-Color: #0E3A5D;        
+    /*
+        USE THIS FOR:
+        - Website header and navigation background
+        - Important headings and titles
+        - Footer background
+        - Icons that represent leadership or authority
+        
+        WHY:
+        This deep blue communicates trust, stability, and professionalism.
+        Perfect for a Chamber of Commerce identity.
+    */
+    --Secondary-Color: #1B7F8C;      
+    /*
+        USE THIS FOR:
+        - Hover states (buttons, links, menu items)
+        - Section backgrounds (light gradients, highlights)
+        - Supporting icons and dividers
+        
+        WHY:
+        Teal blue gives a modern, clean, coastal identity suitable for Ikorodu.
+    */
+    --Accent-Color: #F2A900;         
+    /*
+        USE THIS FOR:
+        - Primary call-to-action buttons (Join Now, Become a Member)
+        - Important highlights or badges
+        - Key announcements
+        
+        WHY:
+        Warm gold grabs attention, symbolizes opportunity, and reflects economic vibrance.
+    */
+
+
+    /* ============================
+       BACKGROUND & LAYOUT COLORS
+       ============================ */
+
+    --Background-Color: #F4F7FA;     
+    /*
+        USE THIS FOR:
+        - Main page background
+        - Section backgrounds behind cards or grids
+        
+        WHY:
+        Soft gray-blue creates a clean, modern, and spacious layout.
+    */
+
+    --Card-Background: #FFFFFF;      
+    /*
+        USE THIS FOR:
+        - Cards (services, programs, member profiles, events)
+        - Forms and content boxes
+        
+        WHY:
+        White gives clarity and focus to information-heavy sections.
+    */
+
+
+    /* ============================
+       TEXT & BORDER COLORS
+       ============================ */
+
+    --Text-Color: #1A1F25;           
+    /*
+        USE THIS FOR:
+        - Main body text
+        - Paragraphs and informational content
+        
+        WHY:
+        Deep charcoal is easy to read and more elegant than black.
+    */
+
+    --Muted-Text: #4C5A68;           
+    /*
+        USE THIS FOR:
+        - Secondary text (dates, descriptions, captions)
+        - Less important information
+        
+        WHY:
+        Soft gray-blue is readable but does not distract from primary content.
+    */
+
+    --Border-Color: #D6DEE4;         
+    /*
+        USE THIS FOR:
+        - Card borders
+        - Section separators
+        - Table lines
+        - Subtle UI outlines
+        
+        WHY:
+        Light cool-gray adds structure without making the layout feel heavy.
+    */
+
+
+    /* ============================
+       TYPOGRAPHY
+       ============================ */
+
+    --Font-Family: "Inter", sans-serif;
+    /*
+        USE THIS FOR:
+        - All headings and body text
+        
+        WHY:
+        Inter is clean, modern, and professional—ideal for business websites.
+    */
+} 
+
+
