@@ -29,6 +29,11 @@ header {
     position: relative;
 }
 
+h1 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
 .logo-name {
     display: flex;
     align-items: center;
@@ -73,6 +78,45 @@ nav a {
     margin: 0 auto;
 }
 
+/* Directory Layout */
+.directory-controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+#members-container {
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+#members-container.grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+#members-container.list {
+    display: block;
+}
+
+.member-card {
+    background: var(--header-bg);
+    color: var(--header-color);
+    border: 1px solid rgba(0,0,0,0.1);
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.member-card img {
+    width: 100%;
+    height: auto;
+}
+
+.member-card a {
+    color: dodgerblue;
+    text-decoration: none;
+}
+
+
 
 /* MOBILE */
 @media (max-width: 712px) {
@@ -105,7 +149,6 @@ nav a {
     #navigation.show {
         display: flex;
     }
-
     #navigation li {
         text-align: center;
         padding: 1rem 0;

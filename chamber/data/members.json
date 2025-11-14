@@ -1,0 +1,65 @@
+[
+    {
+        "name": "PrimeTech Solutions",
+        "address": "12 Igbogbo Road, Ikorodu, Lagos",
+        "phone": "+234 802 555 1111",
+        "website": "https://primetech.com",
+        "image": "",
+        "membership": 3,
+        "description": "A leading IT consulting and software development firm."
+    },
+    {
+        "name": "Golden Harvest Foods",
+        "address": "Market Street, Ikorodu",
+        "phone": "+234 807 934 2222",
+        "website": "https://goldenharvestfoods.com",
+        "image": "goldenharvest.png",
+        "membership": 2,
+        "description": "Producers of organic foods and beverages."
+    },
+    {
+        "name": "Ikorodu FinServe Bank",
+        "address": "21 TOS Benson Road, Ikorodu",
+        "phone": "+234 809 455 3000",
+        "website": "https://finservebank.com",
+        "image": "finserve.png",
+        "membership": 3,
+        "description": "A microfinance institution serving local businesses."
+    },
+    {
+        "name": "Creative Media Hub",
+        "address": "35 Sabo Street, Ikorodu",
+        "phone": "+234 816 442 7999",
+        "website": "https://creativemediahub.com",
+        "image": "creativemedia.png",
+        "membership": 1,
+        "description": "A branding and digital marketing agency."
+    },
+    {
+        "name": "O.E Design Studio",
+        "address": "Agric Bus Stop, Ikorodu",
+        "phone": "+234 901 645 9066",
+        "website": "https://oedesign.com",
+        "image": "oedesign.png",
+        "membership": 2,
+        "description": "Branding, web design, and creative services."
+    },
+    {
+        "name": "FreshMart Superstores",
+        "address": "Awolowo Way, Ikorodu",
+        "phone": "+234 805 242 1133",
+        "website": "https://freshmart.ng",
+        "image": "freshmart.png",
+        "membership": 1,
+        "description": "A neighbourhood grocery and household retail chain."
+    },
+    {
+        "name": "Swift Logistics",
+        "address": "Itamaga, Ikorodu",
+        "phone": "+234 814 100 8822",
+        "website": "https://swiftlogistics.com",
+        "image": "swiftlogistics.png",
+        "membership": 2,
+        "description": "Local and interstate delivery services."
+    }
+]
