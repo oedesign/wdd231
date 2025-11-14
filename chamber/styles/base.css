@@ -1,119 +1,138 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
 :root {
+    --header-bg: #ffffff;
+    --header-color: #111111;
+    --nav-bg: #ffffff;
+}
 
-    --Primary-Color: #0E3A5D;        
-    /*
-        USE THIS FOR:
-        - Website header and navigation background
-        - Important headings and titles
-        - Footer background
-        - Icons that represent leadership or authority
-        
-        WHY:
-        This deep blue communicates trust, stability, and professionalism.
-        Perfect for a Chamber of Commerce identity.
-    */
-    --Secondary-Color: #1B7F8C;      
-    /*
-        USE THIS FOR:
-        - Hover states (buttons, links, menu items)
-        - Section backgrounds (light gradients, highlights)
-        - Supporting icons and dividers
-        
-        WHY:
-        Teal blue gives a modern, clean, coastal identity suitable for Ikorodu.
-    */
-    --Accent-Color: #F2A900;         
-    /*
-        USE THIS FOR:
-        - Primary call-to-action buttons (Join Now, Become a Member)
-        - Important highlights or badges
-        - Key announcements
-        
-        WHY:
-        Warm gold grabs attention, symbolizes opportunity, and reflects economic vibrance.
-    */
+body.dark {
+    --header-bg: #121212;
+    --header-color: #f5f5f5;
+    --nav-bg: #1a1a1a;
+    background-color: #0b0b0b;
+    color: var(--header-color);
+}
 
+/* HEADER */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.7rem 1rem;
+    background: var(--header-bg);
+    color: var(--header-color);
+    position: relative;
+}
 
-    /* ============================
-       BACKGROUND & LAYOUT COLORS
-       ============================ */
+.logo-name {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
 
-    --Background-Color: #F4F7FA;     
-    /*
-        USE THIS FOR:
-        - Main page background
-        - Section backgrounds behind cards or grids
-        
-        WHY:
-        Soft gray-blue creates a clean, modern, and spacious layout.
-    */
+/* DESKTOP NAV */
+nav ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+}
 
-    --Card-Background: #FFFFFF;      
-    /*
-        USE THIS FOR:
-        - Cards (services, programs, member profiles, events)
-        - Forms and content boxes
-        
-        WHY:
-        White gives clarity and focus to information-heavy sections.
-    */
+nav a {
+    color: var(--header-color);
+    text-decoration: none;
+}
 
+.theme-controls {
+    margin-left: auto;
+    margin-right: 3rem;
+}
 
-    /* ============================
-       TEXT & BORDER COLORS
-       ============================ */
+#theme-toggle {
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    padding: 0.3rem 0.6rem;
+    border-radius: 6px;
+    cursor: pointer;
+    color: var(--header-color);
+}
 
-    --Text-Color: #1A1F25;           
-    /*
-        USE THIS FOR:
-        - Main body text
-        - Paragraphs and informational content
-        
-        WHY:
-        Deep charcoal is easy to read and more elegant than black.
-    */
+ #harmburger {
+        display: none;
+    }
 
-    --Muted-Text: #4C5A68;           
-    /*
-        USE THIS FOR:
-        - Secondary text (dates, descriptions, captions)
-        - Less important information
-        
-        WHY:
-        Soft gray-blue is readable but does not distract from primary content.
-    */
-
-    --Border-Color: #D6DEE4;         
-    /*
-        USE THIS FOR:
-        - Card borders
-        - Section separators
-        - Table lines
-        - Subtle UI outlines
-        
-        WHY:
-        Light cool-gray adds structure without making the layout feel heavy.
-    */
+    /* MAIN */
+.hero { 
+    width: 100%;
+    height: 500px;
+    display: block;
+    margin: 0 auto;
+}
 
 
-    /* ============================
-       TYPOGRAPHY
-       ============================ */
+/* MOBILE */
+@media (max-width: 712px) {
+    nav ul {
+        display: none;
+    }
 
-    --Font-Family: "Inter", sans-serif;
-    /*
-        USE THIS FOR:
-        - All headings and body text
-        
-        WHY:
-        Inter is clean, modern, and professional—ideal for business websites.
-    */
-} 
+    #harmburger {
+        display: block;
+        font-size: 2rem;
+        cursor: pointer;
+        color: var(--header-color);
+        position: absolute;
+        right: 1rem;
+        margin: 0;
+    }
 
+    #navigation {
+        background-color: var(--nav-bg);
+        width: 100%;
+        padding: 1.2rem 0;
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 100;
+    }
 
+    #navigation.show {
+        display: flex;
+    }
+
+    #navigation li {
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    #navigation a {
+        color: var(--header-color);
+        font-size: 1.2rem;
+    }
+
+    #navigation li:hover {
+        background-color: darkmagenta;
+    }
+
+    .hero { 
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+}
+
+/* FOOTER */
+footer {
+    margin-top: 2rem;
+    text-align: center;
+    padding: 1rem;
+    background: var(--header-bg);
+    color: var(--header-color);
+}
