@@ -88,9 +88,9 @@ nav a {
 }
 #gridView, #listView {
     padding: 10px;
-    /* background-color: transparent; */
+    background-color: white; 
     outline: none;
-    border: 2px solid;
+    border: 2px solid lightskyblue;
     cursor: pointer;
     border-radius: 10px;
 }
