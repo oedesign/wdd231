@@ -13,7 +13,7 @@
         "address": "Market Street, Ikorodu",
         "phone": "+234 807 934 2222",
         "website": "https://goldenharvestfoods.com",
-        "image": "goldenharvest.png",
+        "image": "",
         "membership": 2,
         "description": "Producers of organic foods and beverages."
     },
@@ -22,7 +22,7 @@
         "address": "21 TOS Benson Road, Ikorodu",
         "phone": "+234 809 455 3000",
         "website": "https://finservebank.com",
-        "image": "finserve.png",
+        "image": "",
         "membership": 3,
         "description": "A microfinance institution serving local businesses."
     },
@@ -31,7 +31,7 @@
         "address": "35 Sabo Street, Ikorodu",
         "phone": "+234 816 442 7999",
         "website": "https://creativemediahub.com",
-        "image": "creativemedia.png",
+        "image": "",
         "membership": 1,
         "description": "A branding and digital marketing agency."
     },
@@ -40,7 +40,7 @@
         "address": "Agric Bus Stop, Ikorodu",
         "phone": "+234 901 645 9066",
         "website": "https://oedesign.com",
-        "image": "oedesign.png",
+        "image": "",
         "membership": 2,
         "description": "Branding, web design, and creative services."
     },
@@ -49,7 +49,7 @@
         "address": "Awolowo Way, Ikorodu",
         "phone": "+234 805 242 1133",
         "website": "https://freshmart.ng",
-        "image": "freshmart.png",
+        "image": "",
         "membership": 1,
         "description": "A neighbourhood grocery and household retail chain."
     },
@@ -58,7 +58,7 @@
         "address": "Itamaga, Ikorodu",
         "phone": "+234 814 100 8822",
         "website": "https://swiftlogistics.com",
-        "image": "swiftlogistics.png",
+        "image": "",
         "membership": 2,
         "description": "Local and interstate delivery services."
     }

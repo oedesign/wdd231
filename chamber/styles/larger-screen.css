@@ -50,6 +50,7 @@ nav ul {
 nav a {
     color: var(--header-color);
     text-decoration: none;
+    font-size: 18px;
 }
 
 .theme-controls {
@@ -78,11 +79,20 @@ nav a {
     margin: 0 auto;
 }
 
+
 /* Directory Layout */
 .directory-controls {
     display: flex;
     justify-content: center;
     gap: 10px;
+}
+#gridView, #listView {
+    padding: 10px;
+    background-color: transparent;
+    outline: none;
+    border: 2px solid;
+    cursor: pointer;
+    border-radius: 10px;
 }
 #members-container {
     display: grid;
