@@ -70,7 +70,6 @@ function displayMembers(members) {
             <p>${member.phone}</p>
             <a href="${member.website}" target="_blank">Visit Website</a>
             <p>Membership Level: ${member.membership}</p>
-            <p>${member.description}</p>
         `;
 
         container.appendChild(card);

@@ -1,37 +1,34 @@
 [
     {
-        "name": "PrimeTech Solutions",
-        "address": "12 Igbogbo Road, Ikorodu, Lagos",
-        "phone": "+234 802 555 1111",
-        "website": "https://primetech.com",
-        "image": "",
-        "membership": 3,
-        "description": "A leading IT consulting and software development firm."
+        "name": "Top Steel Nigeria Limited",
+        "address": "Plot No 478, 479 Ikorodu Industrial Scheme, Ikorodu, 104101, Lagos",
+        "phone": "+234 8129970921 ",
+        "website": "https://topsteel.net/",
+        "image": "../images/top-steel-img.jpg",
+        "membership": 3 
     },
     {
-        "name": "Golden Harvest Foods",
-        "address": "Market Street, Ikorodu",
-        "phone": "+234 807 934 2222",
-        "website": "https://goldenharvestfoods.com",
-        "image": "",
-        "membership": 2,
-        "description": "Producers of organic foods and beverages."
+        "name": "Kimberly-Clark",
+        "address": "MGJH+933, Ikorodu, Agbede 104101, Lagos",
+        "phone": "",
+        "website": "https://www.kimberly-clark.com/",
+        "image": "../images/kimberly-clerk-img.webp",
+        "membership": 2
     },
     {
-        "name": "Ikorodu FinServe Bank",
-        "address": "21 TOS Benson Road, Ikorodu",
+        "name": "Ikorodu garage market",
+        "address": " 4 ajeboriogbon street Sabo Road, Ikorodu 300001",
         "phone": "+234 809 455 3000",
-        "website": "https://finservebank.com",
-        "image": "",
-        "membership": 3,
-        "description": "A microfinance institution serving local businesses."
+        "website": "",
+        "image": "../images/banner.webp",
+        "membership": 3
     },
     {
         "name": "Creative Media Hub",
         "address": "35 Sabo Street, Ikorodu",
         "phone": "+234 816 442 7999",
         "website": "https://creativemediahub.com",
-        "image": "",
+        "image": "../images/banner.webp",
         "membership": 1,
         "description": "A branding and digital marketing agency."
     },
@@ -40,7 +37,7 @@
         "address": "Agric Bus Stop, Ikorodu",
         "phone": "+234 901 645 9066",
         "website": "https://oedesign.com",
-        "image": "",
+        "image": "../images/banner.webp",
         "membership": 2,
         "description": "Branding, web design, and creative services."
     },
@@ -49,7 +46,7 @@
         "address": "Awolowo Way, Ikorodu",
         "phone": "+234 805 242 1133",
         "website": "https://freshmart.ng",
-        "image": "",
+        "image": "../images/banner.webp",
         "membership": 1,
         "description": "A neighbourhood grocery and household retail chain."
     },
@@ -58,7 +55,7 @@
         "address": "Itamaga, Ikorodu",
         "phone": "+234 814 100 8822",
         "website": "https://swiftlogistics.com",
-        "image": "",
+        "image": "../images/banner.webp",
         "membership": 2,
         "description": "Local and interstate delivery services."
     }
