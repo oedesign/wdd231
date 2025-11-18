@@ -4,59 +4,62 @@
         "address": "Plot No 478, 479 Ikorodu Industrial Scheme, Ikorodu, 104101, Lagos",
         "phone": "+234 8129970921 ",
         "website": "https://topsteel.net/",
-        "image": "../images/top-steel-img.jpg",
-        "membership": 3 
+        "image": "../images/banner.webp",
+        "membership": 3,
+        "description": "Manufacturer and supplier of steel products and building materials serving construction and industrial customers in Lagos."
     },
     {
         "name": "Kimberly-Clark",
         "address": "MGJH+933, Ikorodu, Agbede 104101, Lagos",
         "phone": "+234 905 674 9234",
         "website": "https://www.kimberly-clark.com/",
-        "image": "../images/kimberly-clerk-img.webp",
-        "membership": 2
+        "image": "../images/banner.jpg",
+        "membership": 2,
+        "description": "Multinational consumer goods company specializing in personal care and hygiene products."
     },
     {
         "name": "Ikorodu garage market",
         "address": " 4 ajeboriogbon street Sabo Road, Ikorodu 300001",
         "phone": "+234 809 455 3000",
         "website": "",
-        "image": "../images/banner.webp",
-        "membership": 3
+        "image": "../images/banner.jpg",
+        "membership": 3,
+        "description": "A busy local market offering a variety of goods and services to the Ikorodu community."
     },
     {
         "name": "Creative Media Hub",
         "address": "35 Sabo Street, Ikorodu",
         "phone": "+234 816 442 7999",
         "website": "https://creativemediahub.com",
-        "image": "../images/banner.webp",
+        "image": "../images/banner.jpg",
         "membership": 1,
-        "description": "A branding and digital marketing agency."
+        "description": "Digital agency providing media production, branding, and marketing services."
     },
     {
         "name": "O.E Design Studio",
         "address": "Agric Bus Stop, Ikorodu",
         "phone": "+234 901 645 9066",
         "website": "https://oedesign.com",
-        "image": "../images/banner.webp",
+        "image": "../images/banner.jpg",
         "membership": 2,
-        "description": "Branding, web design, and creative services."
+        "description": "Design studio offering graphic design, web design, and creative services."
     },
     {
         "name": "FreshMart Superstores",
         "address": "Awolowo Way, Ikorodu",
         "phone": "+234 805 242 1133",
         "website": "https://freshmart.ng",
-        "image": "../images/banner.webp",
+        "image": "../images/banner.jpg",
         "membership": 1,
-        "description": "A neighbourhood grocery and household retail chain."
+        "description": "Retail supermarket chain providing groceries, household goods, and fresh produce."
     },
     {
         "name": "Swift Logistics",
         "address": "Itamaga, Ikorodu",
         "phone": "+234 814 100 8822",
         "website": "https://swiftlogistics.com",
-        "image": "../images/banner.webp",
+        "image": "../images/banner.jpg",
         "membership": 2,
-        "description": "Local and interstate delivery services."
+        "description": "Logistics and transport company offering freight, warehousing, and delivery services."
     }
 ]

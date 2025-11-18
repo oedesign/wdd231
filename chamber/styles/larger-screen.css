@@ -115,6 +115,7 @@ nav a {
     padding: 1rem;
     border-radius: 8px;
     line-height: 25px;
+    text-align: center;
 }
 
 .member-card img {
