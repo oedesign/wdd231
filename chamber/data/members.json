@@ -1,65 +1,67 @@
-[
+{
+  "members": [
     {
-        "name": "Top Steel Nigeria Limited",
-        "address": "Plot No 478, 479 Ikorodu Industrial Scheme, Ikorodu, 104101, Lagos",
-        "phone": "+234 8129970921 ",
-        "website": "https://topsteel.net/",
-        "image": "../images/banner.webp",
-        "membership": 3,
-        "description": "Manufacturer and supplier of steel products and building materials serving construction and industrial customers in Lagos."
+      "name": "TechNova Solutions",
+      "address": "12 Adewale Street, Ikeja, Lagos",
+      "phone": "+234 802 445 2190",
+      "website": "https://technova.com",
+      "image": "../images/ikorodu-chamber-of-commerce-logo.webp",
+      "membership": 3,
+      "description": "Leading software development agency focusing on AI automation."
     },
     {
-        "name": "Kimberly-Clark",
-        "address": "MGJH+933, Ikorodu, Agbede 104101, Lagos",
-        "phone": "+234 905 674 9234",
-        "website": "https://www.kimberly-clark.com/",
-        "image": "../images/banner.jpg",
-        "membership": 2,
-        "description": "Multinational consumer goods company specializing in personal care and hygiene products."
+      "name": "GreenLeaf Farms",
+      "address": "45 Ogbomosho Road, Ibadan, Oyo",
+      "phone": "+234 701 993 4521",
+      "website": "https://greenleaf.com",
+      "image": "../images/ikorodu-chamber-of-commerce-logo.webp",
+      "membership": 2,
+      "description": "Agricultural company specializing in organic vegetables."
     },
     {
-        "name": "Ikorodu garage market",
-        "address": " 4 ajeboriogbon street Sabo Road, Ikorodu 300001",
-        "phone": "+234 809 455 3000",
-        "website": "",
-        "image": "../images/banner.jpg",
-        "membership": 3,
-        "description": "A busy local market offering a variety of goods and services to the Ikorodu community."
+      "name": "SkyNet ",
+      "address": "300 Herbert Macaulay Way, Yaba, Lagos",
+      "phone": "+234 814 200 1289",
+      "website": "https://skynet.ng",
+      "image": "../images/ikorodu-chamber-of-commerce-logo.webp",
+      "membership": 1,
+      "description": "Internet service provider offering broadband across Nigeria."
     },
     {
-        "name": "Creative Media Hub",
-        "address": "35 Sabo Street, Ikorodu",
-        "phone": "+234 816 442 7999",
-        "website": "https://creativemediahub.com",
-        "image": "../images/banner.jpg",
-        "membership": 1,
-        "description": "Digital agency providing media production, branding, and marketing services."
+      "name": "OE Design",
+      "address": "Osogbo, Osun State",
+      "phone": "+234 901 645 9066",
+      "website": "https://oedesign.com",
+      "image": "../images/ikorodu-chamber-of-commerce-logo.webp",
+      "membership": 3,
+      "description": "Branding, UI/UX, and web development agency."
     },
     {
-        "name": "O.E Design Studio",
-        "address": "Agric Bus Stop, Ikorodu",
-        "phone": "+234 901 645 9066",
-        "website": "https://oedesign.com",
-        "image": "../images/banner.jpg",
-        "membership": 2,
-        "description": "Design studio offering graphic design, web design, and creative services."
+      "name": "Prime Logistics",
+      "address": "89 New Market Road, Onitsha, Anambra",
+      "phone": "+234 906 882 1123",
+      "website": "https://primelogistics.com",
+      "image": "../images/ikorodu-chamber-of-commerce-logo.webp",
+      "membership": 2,
+      "description": "Reliable logistics and delivery services across Nigeria."
     },
     {
-        "name": "FreshMart Superstores",
-        "address": "Awolowo Way, Ikorodu",
-        "phone": "+234 805 242 1133",
-        "website": "https://freshmart.ng",
-        "image": "../images/banner.jpg",
-        "membership": 1,
-        "description": "Retail supermarket chain providing groceries, household goods, and fresh produce."
+      "name": "HealthPlus Clinic",
+      "address": "Plot 18 Wuse District, Abuja",
+      "phone": "+234 808 442 3322",
+      "website": "https://healthplus.com",
+      "image": "../images/ikorodu-chamber-of-commerce-logo.webp",
+      "membership": 1,
+      "description": "Private clinic offering world-class medical services."
     },
     {
-        "name": "Swift Logistics",
-        "address": "Itamaga, Ikorodu",
-        "phone": "+234 814 100 8822",
-        "website": "https://swiftlogistics.com",
-        "image": "../images/banner.jpg",
-        "membership": 2,
-        "description": "Logistics and transport company offering freight, warehousing, and delivery services."
+      "name": "Royal Tech Academy",
+      "address": "12 Ring Road, Benin City",
+      "phone": "+234 816 553 1782",
+      "website": "https://royaltechacademy.com",
+      "image": "../images/ikorodu-chamber-of-commerce-logo.webp",
+      "membership": 3,
+      "description": "Training center for coding, design, and digital marketing."
     }
-]
+  ]
+}

@@ -1,0 +1,176 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* color scheme */
+
+:root {
+  /* Color usage:
+     --primary-color: primary actions/controls (buttons, links, active states, nav highlights)
+     --secondary-color: accents and secondary actions (badges, CTA accents)
+     --background-color: page and component backgrounds
+     --text-color: main body text and headings
+  */
+  /* --primary-color: #0A74DA; */
+   --primary-color: rgb(14, 58, 93);
+  --secondary-color: #FFA500;
+  --background-color: #FFFFFF;
+  --text-color: #333333;
+  --text-color2: white;
+}
+
+h1 {
+   margin-left: 10px;
+}
+
+/* body styles */
+body {
+   font-family: "Roboto", sans-serif;
+}
+/* header styles */
+header {
+   background-color: var(--background-color);
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   border: 2px solid;
+   padding: 20px;
+}
+
+.topNav {
+  display: none;
+}
+
+nav #nav-links {
+  background-color: var(--primary-color);
+}
+
+nav #nav-links {
+   display: flex;
+   justify-content: center;
+   /* align-items: center; */
+   flex-direction: column;
+   list-style-type: none;
+  
+}
+
+nav #nav-links li {
+  padding: 10px;
+  cursor: pointer;
+}
+/* nav #nav-links li:hover {
+  background-color: rgb(4, 48, 83);
+} */
+nav #nav-links li a {
+  font-size: 18px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  color: var(--text-color2);
+}
+
+#hamburgerMenu {
+   font-size: 28px;
+   cursor: pointer;
+   border: none;
+   background-color: transparent;
+}
+
+#darkLightMode {
+   font-size: 20px;
+   cursor: pointer;
+   border: none;
+   background-color: transparent;
+   margin-right: 10px;
+   background-color: lightgray;
+   padding: 5px;
+   border-radius: 50%;
+}
+
+/* main */
+.directory-controls {
+   /* margin: 20px; */
+   /* width: 50%; */
+   margin: 0 auto;
+   text-align: center;
+   /* border: 1px solid black; */
+}
+
+#gridView, #listView {
+   padding: 10px 20px;
+   margin: 10px;
+   border: none;
+   background-color: var(--primary-color);
+   color: white;
+   cursor: pointer;
+  border: 1px solid var(--primary-color);
+}
+
+#gridView:hover, #listView:hover {
+   background-color: var(--background-color);
+   color: var(--text-color);
+
+}
+
+/*  */
+
+#membersContainer.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+  margin: 10px;
+  line-height: 25px;
+}
+
+#membersContainer.list {
+  display: flex;
+  margin: 10px;
+  gap: 10px;
+  flex-direction: column;
+ 
+}
+
+.member-card {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 12px;
+  background: #fff;
+  text-align: center;
+}
+
+.member-card img {
+  width: 120px;
+  height: auto;
+}
+
+.list .member-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* hero - home page */
+.hero-image {
+   position: relative;
+}
+.hero {
+ width: 100%;
+ display: block;
+}
+
+.callToAction {
+  position: absolute;
+  bottom: 30%;
+  left: 42%;
+  border: none;
+  background-color: orange;
+}
+
+/* footer */
+
+footer {
+   text-align: center;
+}

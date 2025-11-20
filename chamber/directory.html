@@ -1,72 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ikorodu Chambers Of Commerce | Lagos, Nigeria</title>
+  <meta name="description" content="Ikorodu Chambers Of Commerce is a leading business organization in Lagos, Nigeria, dedicated to promoting trade and commerce in the Ikorodu region.">
+  <meta name="keywords" content="Ikorodu Chambers Of Commerce, Ikorodu business, Lagos commerce, Nigeria trade, business directory, join Ikorodu Chambers">
+  <meta name="author" content="Elujoba Oluwaseyi Ebenezer">
+  <!-- styles -->
+  <link rel="stylesheet" href="styles/mobile.css">
+  <link rel="stylesheet" href="styles/desktop.css">
+  <!-- scripts -->
+  <script src="scripts/main.js" defer></script>
+  <!-- favicon -->
+  <link rel="icon" href="images/ikd.ico" type="image/x-icon">
+  <!-- fonts styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <!-- social media meta -->
+  <meta property="og:title" content="Ikorodu Chambers Of Commerce | Lagos, Nigeria">
+  <meta property="og:description" content="Ikorodu Chambers Of Commerce is a leading business organization in Lagos, Nigeria, dedicated to promoting trade and commerce in the Ikorodu region.">
+  <meta property="og:image" content="images/og-image.jpg">
+  <meta property="og:url" content="https://ikoroduchambers.com">
+  <meta name="twitter:card" content="summary_large_image">
 
-    <title>IKD Chambers Of Commerce Directory | Connect with Local Businesses</title>
-    <meta name="description" content="Explore the IKD Chambers Of Commerce Directory to find local businesses, services, and networking opportunities in Ikorodu.">
-    <meta name="author" content="Oluwaseyi Elujoba">
-    <meta name="keywords" content="IKD Chambers Of Commerce, Business Directory, Ikorodu, Local Businesses">
-    <!-- fav icon -->
-    <link rel="icon" type="image/ico" href="images/ikd.ico">
-    <!-- style sheets -->
-    <link rel="stylesheet" href="styles/larger-screen.css">
-    <link rel="stylesheet" href="styles/mobile-view.css">
-    <!-- js scripts -->
-    <script src="scripts/directory.js" defer></script>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <meta property="og:title" content="IKD Chambers Of Commerce Directory" />
-    <meta property="og:description" content="Discover the IKD Chambers Of Commerce Directory—connect with local businesses, services, and networking opportunities in Ikorodu." />
-    <meta property="og:image" content="https://oedesign.github.io/wdd231/chamber/directory.html/images/banner.webp" />
-    <meta property="og:url" content="https://yourwebsite.com/directory" />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="IKD Chambers Of Commerce" />
 </head>
-
 <body>
-    <header>
-        <div class="logo-name">
-            <img src="images/ikd-logo.webp" alt="IKD Chambers Of Commerce Logo" width="50">
-            <!-- <span class="p-name">IKD Chambers Of Commerce</span> -->
-        </div>
-
-        <div class="theme-controls">
-            <button id="theme-toggle" type="button" aria-pressed="false" aria-label="Toggle dark mode">🌙</button>
-        </div>
-
-        <nav>
-            <ul id="navigation">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="discover">Discover</a></li>
-                <li><a href="join.html">Join</a></li>
-                <li><a href="directory.html">Directory</a></li>
-                <!-- <li><a href="about.html">About</a></li> -->
-            </ul>
-        </nav>
-
-        <div id="harmburger" class="icon" aria-hidden="true">&#9776;</div>
-    </header>
-
-    <main>
-        <h1>Ikorodu Chambers Of Commerce</h1>
-        <!-- <img class="hero" src="images/banner.webp" alt=""> -->
-    <div class="directory-controls">
-        <button id="gridView">Grid View</button>
-        <button id="listView">List View</button>
+  <header>
+    <div class="logo">
+      <a href=""><img src="images/ikorodu-chamber-of-commerce-logo.webp" alt="Ikorodu Chambers Of Commerce Logo" width="120"></a>
     </div>
+    <div class="entityIcon">
+      <button id="darkLightMode">&#x1F319;</button>
+      <button id="hamburgerMenu">&#9776;</button>
+    </div>
+  </header>
+  <nav class="topNav">
+    <ul id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="directory.html">Directory</a></li>
+      <li><a href="discover.html">Discover</a></li>
+      <li><a href="join.html">Join</a></li>
+    </ul>
+  </nav>
+  <main>
+    <h1>Directory</h1>
+    <div class="directory-controls">
+      <button id="gridView">Grid View</button>
+      <button id="listView">List View</button>
+    </div>
+    
+  <section id="membersContainer" class="grid"></section>
 
-<section id="members-container" class="grid"></section>
-
-    </main>
-
-    <footer>
-        <p>&copy; <span id="currentyear"></span> IKD Chambers Of Commerce</p>
-        <p>Last Modified: <span id="lastmodified"></span></p>
-    </footer>
+     
+  </main>
+  <footer>
+    <!-- <p>&copy; 2025 &middot; Ikorodu Chambers Of Commerce &middot; All rights reserved.</p> -->
+    <p>&copy; <span id="currentyear"></span> IKD Chambers Of Commerce</p>
+    <p>Last Modified: <span id="lastmodified"></span></p>
+  </footer>
 </body>
 </html>
