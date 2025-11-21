@@ -27,4 +27,25 @@
       position: relative;
       top: -41.6px;
     }
+
+    /* Desktop home page hero */
+    .hero {
+      height: 500px;
+    }
+
+    .hero-content h1 {
+      font-size: 3rem;
+    }
+
+    /* Forecast layout */
+    .forecast #forecast-cards {
+      flex-direction: row;
+    }
+
+    /* Spotlights grid */
+    #spotlight-container {
+      flex-direction: row;
+      justify-content: center;
+    }
+
 }
