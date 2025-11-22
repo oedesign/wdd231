@@ -5,19 +5,22 @@
   box-sizing: border-box;
 }
 
-/* color scheme */
+/* color scheme - accessible updates */
 :root {
-  /* Color usage:
-     --primary-color: primary actions/controls (buttons, links, active states, nav highlights)
-     --secondary-color: accents and secondary actions (badges, CTA accents)
-     --background-color: page and component backgrounds
-     --text-color: main body text and headings
-  */
-  --primary-color: rgb(14, 58, 93);
+  /* Primary brand */
+  --primary-color: #0E3A5D;      /* rgb(14,58,93) */
   --secondary-color: #FFA500;
-  --background-color: #FFFFFF;
-  --text-color: #333333;
-  --text-color2: white;
+
+  /* Backgrounds */
+  --background-color: #FFFFFF;   /* page background */
+  --panel-bg: #FFFFFF;           /* card/panel backgrounds */
+
+  /* Text - accessible defaults */
+  --text-color: #111111;         /* main body text on light bg */
+  --text-muted: #444444;         /* secondary text on light bg */
+  --text-inverse: #FFFFFF;       /* text on dark backgrounds */
+
+  /* Utility */
   --card-border: #ddd;
   --gap: 10px;
 }
@@ -25,6 +28,8 @@
 /* Typography */
 body {
    font-family: "Roboto", sans-serif;
+   color: var(--text-color);
+   background-color: var(--background-color);
 }
 
 /* Headings */
@@ -34,6 +39,7 @@ h2 {
 h1 {
   font-size: 28px;
   margin-bottom: 12px;
+  color: var(--text-color);
 }
 
 /* Header */
@@ -47,13 +53,10 @@ header {
 
 /* Top nav toggle (mobile) */
 .topNav {
-  display: none; /* toggled visible by media query for desktop */
+  display: none;
 }
 
-/* NAV - consolidated
-   Mobile default: column layout with colored background.
-   Desktop override (in media query) sets row layout and transparent background.
-*/
+/* NAV - consolidated */
 nav #nav-links {
    display: flex;
    justify-content: center;
@@ -72,7 +75,7 @@ nav #nav-links li a {
   text-decoration: none;
   display: block;
   text-align: center;
-  color: var(--text-color2);
+  color: var(--text-inverse); /* text on primary-color background */
 }
 
 /* Controls in header */
@@ -87,7 +90,6 @@ nav #nav-links li a {
    font-size: 20px;
    cursor: pointer;
    border: none;
-   /* kept lightgray as the effective background (lint showed a duplicate); use this */
    background-color: lightgray;
    margin-right: 10px;
    padding: 5px;
@@ -104,9 +106,9 @@ nav #nav-links li a {
    padding: 10px 20px;
    margin: 10px;
    background-color: var(--primary-color);
-   color: white;
+   color: var(--text-inverse);
    cursor: pointer;
-   border: 1px solid var(--primary-color); /* kept final border choice */
+   border: 1px solid var(--primary-color);
 }
 
 #gridView:hover, #listView:hover {
@@ -134,8 +136,9 @@ nav #nav-links li a {
   border: 1px solid #ccc;
   padding: 1rem;
   border-radius: 12px;
-  background: #fff;
+  background: var(--panel-bg);
   text-align: center;
+  color: var(--text-color);
 }
 
 .member-card img {
@@ -150,19 +153,17 @@ nav #nav-links li a {
   justify-content: center;
 }
 
-/* HERO SECTION - consolidated
-   Use flex layout (keeps centering) and background image as provided.
-*/
+/* HERO SECTION */
 .hero-image {
    position: relative;
 }
 
 .hero {
   width: 100%;
-  display: flex;           /* consolidated: prefer flex for centering elements */
+  display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: var(--text-inverse);
   text-align: center;
   padding: 1rem;
   background: url('../images/ikdbanner.webp') center/cover no-repeat;
@@ -172,7 +173,7 @@ nav #nav-links li a {
 .hero-content h1 {
   font-size: 1.8rem;
   font-weight: 700;
-  color: var(--background-color);
+  color: var(--text-inverse);
 }
 
 .callToAction {
@@ -180,7 +181,8 @@ nav #nav-links li a {
   bottom: 30%;
   left: 42%;
   border: none;
-  background-color: orange;
+  background-color: var(--secondary-color);
+  color: var(--text-inverse);
 }
 
 .cta-btn {
@@ -188,7 +190,7 @@ nav #nav-links li a {
   margin-top: 1rem;
   padding: 10px 20px;
   background: var(--primary-color);
-  color: white;
+  color: var(--text-inverse);
   text-decoration: none;
   border-radius: 5px;
 }
@@ -207,8 +209,9 @@ nav #nav-links li a {
 .w-forecast {
   min-height: 200px;
   border: 1px solid var(--card-border);
-  background: #fff;
+  background: var(--panel-bg);
   padding: 12px;
+  color: var(--text-color);
 }
 
 /* Spotlights */
@@ -227,6 +230,7 @@ nav #nav-links li a {
     border-radius: 12px;
     text-align: center;
     box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    color: var(--text-color);
 }
 
 .spotlight-card img.logo {
@@ -238,12 +242,13 @@ nav #nav-links li a {
 .level {
     font-style: italic;
     margin-bottom: 0.5rem;
-    color: #444;
+    color: var(--text-muted);
 }
 
 /* Footer */
 footer {
   margin-top: 20px;
   text-align: center;
+  color: var(--text-color);
 }
 

@@ -12,13 +12,13 @@
        right: 50px;
    }
 
-   /* Desktop: make nav row and transparent background */
+   /* Desktop nav row & transparent background */
    nav #nav-links {
        flex-direction: row;
        list-style-type: none;
-       background-color: transparent; /* overrides mobile background */
+       background-color: transparent;
    }
-   /* link color for desktop */
+
    nav #nav-links li a {
       color: var(--text-color);
    }
@@ -32,7 +32,6 @@
       top: -41.6px;
    }
 
-   /* Desktop home page hero grid */
    .grid {
      margin: 0 auto;
      grid-template-columns: repeat(3, 1fr);
@@ -44,16 +43,18 @@
 .current-title {
   font-weight: 600;
   margin-bottom: 8px;
+  color: var(--text-color);
 }
 
 .current-temp {
   font-size: 36px;
   font-weight: 700;
+  color: var(--text-color);
 }
 
 .current-desc {
   text-transform: capitalize;
-  color: #444;
+  color: var(--text-muted);
 }
 
 /* Forecast */
@@ -70,20 +71,22 @@
   text-align: center;
   border-radius: 6px;
   background: #fbfbfb;
+  color: var(--text-color);
 }
 
 .forecast-day .label {
   font-size: 13px;
-  color: #666;
+  color: var(--text-muted);
   margin-bottom: 4px;
 }
 
 .forecast-day .temp {
   font-size: 18px;
   font-weight: 700;
+  color: var(--text-color);
 }
 
 .small {
   font-size: 12px;
-  color: #666;
+  color: var(--text-muted);
 }
