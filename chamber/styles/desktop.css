@@ -1,8 +1,6 @@
 /* Responsive / Desktop overrides */
 @media screen and (min-width: 868px) {
-   .topNav {
-      display: flex;
-   }
+   .topNav { display: flex; }
 
    nav {
        max-width: 350px;
@@ -12,81 +10,29 @@
        right: 50px;
    }
 
-   /* Desktop nav row & transparent background */
    nav #nav-links {
        flex-direction: row;
        list-style-type: none;
        background-color: transparent;
    }
 
-   nav #nav-links li a {
-      color: var(--text-color);
-   }
+   nav #nav-links li a { color: var(--text-color); }
 
-   #hamburgerMenu {
-       display: none;
-   }
+   #hamburgerMenu { display: none; }
 
-   main {
-      position: relative;
-      top: -41.6px;
-   }
+   main { position: relative; top: -41.6px; }
 
-   .grid {
-     margin: 0 auto;
-     grid-template-columns: repeat(3, 1fr);
-     margin: 10px;
-   }
+   .grid { margin: 0 auto; grid-template-columns: repeat(3, 1fr); margin: 10px; }
 }
 
 /* Current weather */
-.current-title {
-  font-weight: 600;
-  margin-bottom: 8px;
-  color: var(--text-color);
-}
-
-.current-temp {
-  font-size: 36px;
-  font-weight: 700;
-  color: var(--text-color);
-}
-
-.current-desc {
-  text-transform: capitalize;
-  color: var(--text-muted);
-}
+.current-title { font-weight: 600; margin-bottom: 8px; color: var(--text-color); }
+.current-temp { font-size: 36px; font-weight: 700; color: var(--text-color); }
+.current-desc { text-transform: capitalize; color: var(--text-muted); }
 
 /* Forecast */
-.forecast-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
-  margin-top: 10px;
-}
-
-.forecast-day {
-  border: 1px solid #eee;
-  padding: 8px;
-  text-align: center;
-  border-radius: 6px;
-  background: #fbfbfb;
-  color: var(--text-color);
-}
-
-.forecast-day .label {
-  font-size: 13px;
-  color: var(--text-muted);
-  margin-bottom: 4px;
-}
-
-.forecast-day .temp {
-  font-size: 18px;
-  font-weight: 700;
-  color: var(--text-color);
-}
-
-.small {
-  font-size: 12px;
-  color: var(--text-muted);
-}
+.forecast-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 10px; }
+.forecast-day { border: 1px solid #eee; padding: 8px; text-align: center; border-radius: 6px; background: #fbfbfb; color: var(--text-color); }
+.forecast-day .label { font-size: 13px; color: var(--text-muted); margin-bottom: 4px; }
+.forecast-day .temp { font-size: 18px; font-weight: 700; color: var(--text-color); }
+.small { font-size: 12px; color: var(--text-muted); }
