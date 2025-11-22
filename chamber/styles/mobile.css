@@ -1,3 +1,4 @@
+/* Reset */
 *{
   padding: 0;
   margin: 0;
@@ -5,7 +6,6 @@
 }
 
 /* color scheme */
-
 :root {
   /* Color usage:
      --primary-color: primary actions/controls (buttons, links, active states, nav highlights)
@@ -13,8 +13,7 @@
      --background-color: page and component backgrounds
      --text-color: main body text and headings
   */
-  /* --primary-color: #0A74DA; */
-   --primary-color: rgb(14, 58, 93);
+  --primary-color: rgb(14, 58, 93);
   --secondary-color: #FFA500;
   --background-color: #FFFFFF;
   --text-color: #333333;
@@ -23,48 +22,51 @@
   --gap: 10px;
 }
 
-h2 {
-   margin-left: 10px;
-}
-
-/* body styles */
+/* Typography */
 body {
    font-family: "Roboto", sans-serif;
 }
-/* header styles */
+
+/* Headings */
+h2 {
+   margin-left: 10px;
+}
+h1 {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+/* Header */
 header {
    background-color: var(--background-color);
    display: flex;
    align-items: center;
    justify-content: space-between;
-   border: 2px solid;
    padding: 20px;
 }
 
+/* Top nav toggle (mobile) */
 .topNav {
-  display: none;
+  display: none; /* toggled visible by media query for desktop */
 }
 
-nav #nav-links {
-  background-color: var(--primary-color);
-}
-
+/* NAV - consolidated
+   Mobile default: column layout with colored background.
+   Desktop override (in media query) sets row layout and transparent background.
+*/
 nav #nav-links {
    display: flex;
    justify-content: center;
-   /* align-items: center; */
    flex-direction: column;
    list-style-type: none;
-  
+   background-color: var(--primary-color);
 }
 
 nav #nav-links li {
   padding: 10px;
   cursor: pointer;
 }
-/* nav #nav-links li:hover {
-  background-color: rgb(4, 48, 83);
-} */
+
 nav #nav-links li a {
   font-size: 18px;
   text-decoration: none;
@@ -73,6 +75,7 @@ nav #nav-links li a {
   color: var(--text-color2);
 }
 
+/* Controls in header */
 #hamburgerMenu {
    font-size: 28px;
    cursor: pointer;
@@ -84,40 +87,34 @@ nav #nav-links li a {
    font-size: 20px;
    cursor: pointer;
    border: none;
-   background-color: transparent;
-   margin-right: 10px;
+   /* kept lightgray as the effective background (lint showed a duplicate); use this */
    background-color: lightgray;
+   margin-right: 10px;
    padding: 5px;
    border-radius: 50%;
 }
 
-/* main */
+/* Directory controls (grid/list switch) */
 .directory-controls {
-   /* margin: 20px; */
-   /* width: 50%; */
    margin: 0 auto;
    text-align: center;
-   /* border: 1px solid black; */
 }
 
 #gridView, #listView {
    padding: 10px 20px;
    margin: 10px;
-   border: none;
    background-color: var(--primary-color);
    color: white;
    cursor: pointer;
-  border: 1px solid var(--primary-color);
+   border: 1px solid var(--primary-color); /* kept final border choice */
 }
 
 #gridView:hover, #listView:hover {
    background-color: var(--background-color);
    color: var(--text-color);
-
 }
 
-/*  */
-
+/* Members container - two presentation modes */
 #membersContainer.grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -131,7 +128,6 @@ nav #nav-links li a {
   margin: 10px;
   gap: 10px;
   flex-direction: column;
- 
 }
 
 .member-card {
@@ -154,13 +150,29 @@ nav #nav-links li a {
   justify-content: center;
 }
 
-/* hero - home page */
+/* HERO SECTION - consolidated
+   Use flex layout (keeps centering) and background image as provided.
+*/
 .hero-image {
    position: relative;
 }
+
 .hero {
- width: 100%;
- display: block;
+  width: 100%;
+  display: flex;           /* consolidated: prefer flex for centering elements */
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  background: url('../images/ikdbanner.webp') center/cover no-repeat;
+  height: 350px;
+}
+
+.hero-content h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--background-color);
 }
 
 .callToAction {
@@ -169,26 +181,6 @@ nav #nav-links li a {
   left: 42%;
   border: none;
   background-color: orange;
-}
-
-/* main home page */
-
-/* HERO SECTION */
-.hero {
-  background: url('../images/ikdbanner.webp') center/cover no-repeat;
-  height: 350px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-}
-
-.hero-content h1 {
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: var(--background-color);
 }
 
 .cta-btn {
@@ -201,35 +193,7 @@ nav #nav-links li a {
   border-radius: 5px;
 }
 
-
-/* .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  margin: 10px;
-  gap: 10px;
-
-}
-
-.events-con {
-  height: 200px;
-  border: 1px solid;
-}
-
- .c-weather, .w-forecast {
-  height: 200px;
-  border: 1px solid;
-} */
-
-
-/* Body setup */
-
-/* Title */
-h1 {
-  font-size: 28px;
-  margin-bottom: 12px;
-}
-
-/* Mobile-first grid */
+/* Grid layout (mobile-first) */
 .grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -237,7 +201,7 @@ h1 {
   margin: 10px;
 }
 
-/* Cards */
+/* Cards used across pages */
 .events-con,
 .c-weather,
 .w-forecast {
@@ -247,7 +211,7 @@ h1 {
   padding: 12px;
 }
 
-/* Home-page spotlights */
+/* Spotlights */
 .spotlights {
     display: flex;
     gap: 1.5rem;
@@ -277,9 +241,9 @@ h1 {
     color: #444;
 }
 
-/* footer */
-
+/* Footer */
 footer {
   margin-top: 20px;
-   text-align: center;
+  text-align: center;
 }
+

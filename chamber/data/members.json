@@ -14,7 +14,7 @@
       "address": "45 Ogbomosho Road, Ibadan, Oyo",
       "phone": "+234 701 993 4521",
       "website": "https://greenleaf.com",
-      "image": "../images/ikorodu-chamber-of-commerce-logo.webp",
+      "image": "../images/ikd-logo.webp",
       "membership": 2,
       "description": "Agricultural company specializing in organic vegetables."
     },
@@ -23,7 +23,7 @@
       "address": "300 Herbert Macaulay Way, Yaba, Lagos",
       "phone": "+234 814 200 1289",
       "website": "https://skynet.ng",
-      "image": "../images/ikorodu-chamber-of-commerce-logo.webp",
+      "image": "../images/ikd-logo.webp",
       "membership": 1,
       "description": "Internet service provider offering broadband across Nigeria."
     },
@@ -32,7 +32,7 @@
       "address": "Osogbo, Osun State",
       "phone": "+234 901 645 9066",
       "website": "https://oedesign.com",
-      "image": "../images/ikorodu-chamber-of-commerce-logo.webp",
+      "image": "../images/ikd-logo.webp",
       "membership": 3,
       "description": "Branding, UI/UX, and web development agency."
     },
@@ -41,7 +41,7 @@
       "address": "89 New Market Road, Onitsha, Anambra",
       "phone": "+234 906 882 1123",
       "website": "https://primelogistics.com",
-      "image": "../images/ikorodu-chamber-of-commerce-logo.webp",
+      "image": "../images/ikd-logo.webp",
       "membership": 2,
       "description": "Reliable logistics and delivery services across Nigeria."
     },
@@ -50,7 +50,7 @@
       "address": "Plot 18 Wuse District, Abuja",
       "phone": "+234 808 442 3322",
       "website": "https://healthplus.com",
-      "image": "../images/ikorodu-chamber-of-commerce-logo.webp",
+      "image": "../images/ikd-logo.webp",
       "membership": 1,
       "description": "Private clinic offering world-class medical services."
     },
@@ -59,7 +59,7 @@
       "address": "12 Ring Road, Benin City",
       "phone": "+234 816 553 1782",
       "website": "https://royaltechacademy.com",
-      "image": "../images/ikorodu-chamber-of-commerce-logo.webp",
+      "image": "../images/ikd-logo.webp",
       "membership": 3,
       "description": "Training center for coding, design, and digital marketing."
     }

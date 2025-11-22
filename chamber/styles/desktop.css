@@ -1,42 +1,43 @@
+/* Responsive / Desktop overrides */
 @media screen and (min-width: 868px) {
-    /* body {
-        
-    } */
    .topNav {
       display: flex;
    }
-    nav {
+
+   nav {
        max-width: 350px;
        margin-left: auto;
        position: relative;
        top: -80px;
        right: 50px;
-    }
-    nav #nav-links {
+   }
+
+   /* Desktop: make nav row and transparent background */
+   nav #nav-links {
        flex-direction: row;
        list-style-type: none;
-       background-color: transparent;
-    }
-    nav #nav-links li a {
+       background-color: transparent; /* overrides mobile background */
+   }
+   /* link color for desktop */
+   nav #nav-links li a {
       color: var(--text-color);
-  }
-     #hamburgerMenu {
+   }
+
+   #hamburgerMenu {
        display: none;
-    }
-    main {
+   }
+
+   main {
       position: relative;
       top: -41.6px;
-    }
+   }
 
-    /* Desktop home page hero */
-  
-
-     .grid {
-    /* max-width: 868px; */
-    margin: 0 auto;
-    grid-template-columns: repeat(3, 1fr);
-    margin: 10px;
-  }
+   /* Desktop home page hero grid */
+   .grid {
+     margin: 0 auto;
+     grid-template-columns: repeat(3, 1fr);
+     margin: 10px;
+   }
 }
 
 /* Current weather */
