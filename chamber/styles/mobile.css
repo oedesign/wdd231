@@ -31,9 +31,10 @@ body {
 /* Headings */
 h1, h2 {
    color: var(--text-color); /* ensures not white on white */
+   text-align: center;
 }
 
-h2 { margin-left: 10px; }
+h2 { margin-top: 10px; }
 h1 { font-size: 28px; margin-bottom: 12px; }
 
 /* Header */
@@ -153,7 +154,7 @@ nav #nav-links li a {
   color: var(--text-inverse); /* white text on dark image */
   text-align: center;
   padding: 1rem;
-  background: url('../images/ikdbanner.webp') center/cover no-repeat;
+  background: url('../images/ikd-banner.webp') center/cover no-repeat;
   height: 350px;
 }
 
