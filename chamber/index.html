@@ -8,18 +8,23 @@
   <meta name="description" content="Ikorodu Chambers Of Commerce is a leading business organization in Lagos, Nigeria, dedicated to promoting trade and commerce in the Ikorodu region.">
   <meta name="keywords" content="Ikorodu Chambers Of Commerce, Ikorodu business, Lagos commerce, Nigeria trade, business directory, join Ikorodu Chambers">
   <meta name="author" content="Elujoba Oluwaseyi Ebenezer">
+
   <!-- styles -->
   <link rel="stylesheet" href="styles/mobile.css">
   <link rel="stylesheet" href="styles/desktop.css">
+
   <!-- scripts -->
   <script src="scripts/main.js" defer></script>
   <script src="scripts/home.js" defer></script>
+
   <!-- favicon -->
   <link rel="icon" href="images/ikd.ico" type="image/x-icon">
+
   <!-- fonts styles -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
   <!-- social media meta -->
   <meta property="og:title" content="Ikorodu Chambers Of Commerce | Lagos, Nigeria">
   <meta property="og:description" content="Ikorodu Chambers Of Commerce is a leading business organization in Lagos, Nigeria, dedicated to promoting trade and commerce in the Ikorodu region.">
@@ -31,13 +36,14 @@
 <body>
   <header>
     <div class="logo">
-      <a href=""><img src="images/ikd-logo.webp" alt="Ikorodu Chambers Of Commerce Logo" width="120"></a>
+      <a href="index.html"><img src="images/ikd-logo.webp" alt="Ikorodu Chambers Of Commerce Logo" width="120"></a>
     </div>
     <div class="entityIcon">
       <button id="darkLightMode">&#x1F319;</button>
       <button id="hamburgerMenu">&#9776;</button>
     </div>
   </header>
+
   <nav class="topNav">
     <ul id="nav-links">
       <li><a href="index.html">Home</a></li>
@@ -46,29 +52,29 @@
       <li><a href="join.html">Join</a></li>
     </ul>
   </nav>
-  
+
   <main>
-  <!-- HERO SECTION -->
-  <section class="hero">
-    <div class="hero-content">
-       <h1>Ikorodu Chambers of Commerce</h1>
-    <!-- <p>Supporting businesses. Growing opportunities. Strengthening the Ikorodu community.</p> -->
-      <a href="join.html" class="cta-btn">Join the Chamber</a>
-    </div>
-  </section>
 
-    <h2>Home</h2>
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Ikorodu Chambers of Commerce</h1>
+        <a href="join.html" class="cta-btn">Join the Chamber</a>
+      </div>
+    </section>
 
+    <!-- EVENTS, WEATHER, FORECAST -->
     <section>
-    <div class="grid">
+      <h2>Updates</h2>
+      <div class="grid">
 
         <div class="events-con">
-          <h2>Current Events</h2>
+          <h3>Current Events</h3>
           <p>Placeholder event goes here.</p>
         </div>
 
         <div class="c-weather">
-          <div class="current-title">Weather — <span id="location-name">Loading…</span></div>
+          <h3 class="current-title">Weather — <span id="location-name">Loading…</span></h3>
           <div id="current-weather">
             <div class="current-temp" id="current-temp">--°C</div>
             <div class="current-desc" id="current-desc">Loading...</div>
@@ -77,22 +83,25 @@
         </div>
 
         <div class="w-forecast">
-          <div class="current-title">3-Day Forecast</div>
+          <h3 class="current-title">3-Day Forecast</h3>
           <div id="forecast" class="forecast-grid"></div>
         </div>
 
-    </div>
+      </div>
     </section>
 
+    <!-- SPOTLIGHT SECTION -->
     <section>
-      <!-- <h3>Business Spotlight</h3> -->
+      <h2>Business Spotlight</h2>
       <div id="spotlight-container" class="spotlights"></div>
     </section>
 
+  </main> <!-- FIXED MISSING CLOSING TAG -->
+
   <footer>
-    <!-- <p>&copy; 2025 &middot; Ikorodu Chambers Of Commerce &middot; All rights reserved.</p> -->
     <p>&copy; <span id="currentyear"></span> IKD Chambers Of Commerce</p>
     <p>Last Modified: <span id="lastmodified"></span></p>
   </footer>
+
 </body>
 </html>
