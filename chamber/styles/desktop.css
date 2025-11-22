@@ -29,23 +29,60 @@
     }
 
     /* Desktop home page hero */
-    .hero {
-      height: 500px;
-    }
+  
 
-    .hero-content h1 {
-      font-size: 3rem;
-    }
+     .grid {
+    /* max-width: 868px; */
+    margin: 0 auto;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 10px;
+  }
+}
 
-    /* Forecast layout */
-    .forecast #forecast-cards {
-      flex-direction: row;
-    }
+/* Current weather */
+.current-title {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
 
-    /* Spotlights grid */
-    #spotlight-container {
-      flex-direction: row;
-      justify-content: center;
-    }
+.current-temp {
+  font-size: 36px;
+  font-weight: 700;
+}
 
+.current-desc {
+  text-transform: capitalize;
+  color: #444;
+}
+
+/* Forecast */
+.forecast-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.forecast-day {
+  border: 1px solid #eee;
+  padding: 8px;
+  text-align: center;
+  border-radius: 6px;
+  background: #fbfbfb;
+}
+
+.forecast-day .label {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+.forecast-day .temp {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.small {
+  font-size: 12px;
+  color: #666;
 }

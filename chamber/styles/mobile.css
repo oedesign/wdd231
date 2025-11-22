@@ -19,9 +19,11 @@
   --background-color: #FFFFFF;
   --text-color: #333333;
   --text-color2: white;
+  --card-border: #ddd;
+  --gap: 10px;
 }
 
-h1 {
+h2 {
    margin-left: 10px;
 }
 
@@ -118,7 +120,7 @@ nav #nav-links li a {
 
 #membersContainer.grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
   margin: 10px;
   line-height: 25px;
@@ -173,7 +175,7 @@ nav #nav-links li a {
 
 /* HERO SECTION */
 .hero {
-  background: url('../images/ikd-banner2.jpg') center/cover no-repeat;
+  background: url('../images/ikdbanner.webp') center/cover no-repeat;
   height: 350px;
   display: flex;
   align-items: center;
@@ -186,7 +188,7 @@ nav #nav-links li a {
 .hero-content h1 {
   font-size: 1.8rem;
   font-weight: 700;
-  color: var(--primary-color);
+  color: var(--background-color);
 }
 
 .cta-btn {
@@ -199,52 +201,85 @@ nav #nav-links li a {
   border-radius: 5px;
 }
 
-/* EVENTS */
-.events {
-  padding: 1rem;
+
+/* .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin: 10px;
+  gap: 10px;
+
 }
 
-/* WEATHER */
-.weather {
-  padding: 1rem;
-  background: #f3f3f3;
-  margin-top: 1rem;
+.events-con {
+  height: 200px;
+  border: 1px solid;
 }
 
-.forecast #forecast-cards {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+ .c-weather, .w-forecast {
+  height: 200px;
+  border: 1px solid;
+} */
+
+
+/* Body setup */
+
+/* Title */
+h1 {
+  font-size: 28px;
+  margin-bottom: 12px;
 }
 
-/* SPOTLIGHTS */
+/* Mobile-first grid */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--gap);
+  margin: 10px;
+}
+
+/* Cards */
+.events-con,
+.c-weather,
+.w-forecast {
+  min-height: 200px;
+  border: 1px solid var(--card-border);
+  background: #fff;
+  padding: 12px;
+}
+
+/* Home-page spotlights */
 .spotlights {
-  padding: 1rem;
-}
-
-#spotlight-container {
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-  margin-top: 1rem;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 10px;
 }
 
 .spotlight-card {
-  padding: 1rem;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  text-align: center;
+    background: #eaeaea;
+    width: 280px;
+    padding: 1rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
 
-.spotlight-card img {
-  width: 100px;
-  margin-bottom: 10px;
+.spotlight-card img.logo {
+    width: 120px;
+    height: auto;
+    margin-top: 0.5rem;
 }
 
+.level {
+    font-style: italic;
+    margin-bottom: 0.5rem;
+    color: #444;
+}
 
 /* footer */
 
 footer {
+  margin-top: 20px;
    text-align: center;
 }

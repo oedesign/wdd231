@@ -31,7 +31,7 @@
 <body>
   <header>
     <div class="logo">
-      <a href=""><img src="images/ikorodu-chamber-of-commerce-logo.webp" alt="Ikorodu Chambers Of Commerce Logo" width="120"></a>
+      <a href=""><img src="images/ikd-logo.webp" alt="Ikorodu Chambers Of Commerce Logo" width="120"></a>
     </div>
     <div class="entityIcon">
       <button id="darkLightMode">&#x1F319;</button>
@@ -48,48 +48,46 @@
   </nav>
   
   <main>
-
   <!-- HERO SECTION -->
   <section class="hero">
     <div class="hero-content">
-      <h1>Ikorodu Chambers of Commerce</h1>
-      <p>Supporting businesses. Growing opportunities. Strengthening the Ikorodu community.</p>
+       <h1>Ikorodu Chambers of Commerce</h1>
+    <!-- <p>Supporting businesses. Growing opportunities. Strengthening the Ikorodu community.</p> -->
       <a href="join.html" class="cta-btn">Join the Chamber</a>
     </div>
   </section>
 
-  <!-- CURRENT EVENTS SECTION -->
-  <section class="events">
-    <h2>Current Events</h2>
-    <ul>
-      <li><strong>Business Networking Meetup:</strong> January 28, 2025</li>
-      <li><strong>Women in Business Conference:</strong> February 16, 2025</li>
-      <li><strong>Ikorodu Business Expo:</strong> March 2025</li>
-    </ul>
-  </section>
+    <h2>Home</h2>
 
-  <!-- WEATHER SECTION -->
-  <section class="weather">
-    <h2>Weather in Ikorodu</h2>
+    <section>
+    <div class="grid">
 
-    <div class="current-weather">
-      <p><strong>Temperature:</strong> <span id="temp"></span>°C</p>
-      <p><strong>Condition:</strong> <span id="description"></span></p>
+        <div class="events-con">
+          <h2>Current Events</h2>
+          <p>Placeholder event goes here.</p>
+        </div>
+
+        <div class="c-weather">
+          <div class="current-title">Weather — <span id="location-name">Loading…</span></div>
+          <div id="current-weather">
+            <div class="current-temp" id="current-temp">--°C</div>
+            <div class="current-desc" id="current-desc">Loading...</div>
+            <div class="small" id="current-details"></div>
+          </div>
+        </div>
+
+        <div class="w-forecast">
+          <div class="current-title">3-Day Forecast</div>
+          <div id="forecast" class="forecast-grid"></div>
+        </div>
+
     </div>
+    </section>
 
-    <div class="forecast">
-      <h3>3-Day Forecast</h3>
-      <div id="forecast-cards"></div>
-    </div>
-  </section>
-
-  <!-- SPOTLIGHTS SECTION -->
-  <section class="spotlights">
-    <h2>Member Spotlights</h2>
-    <div id="spotlight-container"></div>
-  </section>
-
-</main>
+    <section>
+      <!-- <h3>Business Spotlight</h3> -->
+      <div id="spotlight-container" class="spotlights"></div>
+    </section>
 
   <footer>
     <!-- <p>&copy; 2025 &middot; Ikorodu Chambers Of Commerce &middot; All rights reserved.</p> -->
