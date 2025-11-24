@@ -11,7 +11,7 @@
     },
     {
       "name": "GreenLeaf Farms",
-      "address": "45 Ogbomosho Road, Ibadan, Oyo",
+      "address": "45 Awolowo Road, Lagos",
       "phone": "+234 701 993 4521",
       "website": "https://greenleaf.com",
       "image": "../images/ikd-logo.webp",
@@ -20,7 +20,7 @@
     },
     {
       "name": "SkyNet ",
-      "address": "300 Herbert Macaulay Way, Yaba, Lagos",
+      "address": "300 Ikorodu road, Lagos",
       "phone": "+234 814 200 1289",
       "website": "https://skynet.ng",
       "image": "../images/ikd-logo.webp",
@@ -28,8 +28,8 @@
       "description": "Internet service provider offering broadband across Nigeria."
     },
     {
-      "name": "OE Design",
-      "address": "Osogbo, Osun State",
+      "name": "OE Designs",
+      "address": "Ikorod, Lagos",
       "phone": "+234 901 645 9066",
       "website": "https://oedesign.com",
       "image": "../images/ikd-logo.webp",
@@ -38,7 +38,7 @@
     },
     {
       "name": "Prime Logistics",
-      "address": "89 New Market Road, Onitsha, Anambra",
+      "address": "26, Ogunmpsho street",
       "phone": "+234 906 882 1123",
       "website": "https://primelogistics.com",
       "image": "../images/ikd-logo.webp",
@@ -47,7 +47,7 @@
     },
     {
       "name": "HealthPlus Clinic",
-      "address": "Plot 18 Wuse District, Abuja",
+      "address": "Plot 18 Wuse District, Lagos",
       "phone": "+234 808 442 3322",
       "website": "https://healthplus.com",
       "image": "../images/ikd-logo.webp",
@@ -56,7 +56,7 @@
     },
     {
       "name": "Royal Tech Academy",
-      "address": "12 Ring Road, Benin City",
+      "address": "12 Ring Road, Ikorodu City",
       "phone": "+234 816 553 1782",
       "website": "https://royaltechacademy.com",
       "image": "../images/ikd-logo.webp",

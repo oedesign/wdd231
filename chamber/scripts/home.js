@@ -9,7 +9,7 @@
 */
 
 (async function() {
-  const API_KEY = "6e6783d0b3de581a7b6837f752f45edc"; // your key
+  const API_KEY = "6e6783d0b3de581a7b6837f752f45edc"; // 
   const LOCATION = "Ikorodu, Lagos, NG";
   const UNITS = "metric"; // 'metric' = °C, 'imperial' = °F
 
