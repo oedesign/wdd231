@@ -26,28 +26,28 @@
   <meta property="og:image" content="images/og-image.jpg">
   <meta property="og:url" content="https://ikoroduchambers.com">
   <meta name="twitter:card" content="summary_large_image">
-
 </head>
 <body>
-    <header>
+  <header>
     <div class="logo">
-      <a href=""><img src="images/ikd-logo.webp" alt="Ikorodu Chambers Of Commerce Logo" width="120"></a>
+      <a href="index.html"><img src="images/ikd-logo.webp" alt="Ikorodu Chambers Of Commerce Logo" width="120"></a>
     </div>
     <div class="entityIcon">
-      <button id="darkLightMode">&#x1F319;</button>
-      <button id="hamburgerMenu">&#9776;</button>
+      <button id="darkLightMode" aria-label="Toggle dark/light mode">🌙</button>
+      <button id="hamburgerMenu" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">☰</button>
     </div>
   </header>
-  <nav class="topNav">
+
+  <nav class="topNav" aria-label="Main navigation">
     <ul id="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="directory.html">Directory</a></li>
       <li><a href="discover.html">Discover</a></li>
       <li><a href="join.html">Join</a></li>
-      <li><a href="thankyou.html"></a></li>
     </ul>
   </nav>
-    <main class="wrap" id="main">
+
+  <main class="wrap" id="main">
     <div>
       <header>
         <div>
@@ -64,12 +64,12 @@
           <div class="row">
             <label class="field">
               <span class="label-text">First name <span aria-hidden="true" style="color:#d00">*</span></span>
-              <input required name="firstName" title="Applicant's first name" autocomplete="given-name" type="text" placeholder="Given name" />
+              <input required name="firstName" title="Applicant's first name" autocomplete="given-name" type="text" placeholder="Given name">
             </label>
 
             <label class="field">
               <span class="label-text">Last name <span aria-hidden="true" style="color:#d00">*</span></span>
-              <input required name="lastName" title="Applicant's last name" autocomplete="family-name" type="text" placeholder="Family name" />
+              <input required name="lastName" title="Applicant's last name" autocomplete="family-name" type="text" placeholder="Family name">
             </label>
           </div>
 
@@ -77,13 +77,13 @@
             <span class="label-text">Organizational title</span>
             <input
               name="orgTitle"
-              title="Applicants position or title within their organization"
+              title="Applicant's position or title within their organization"
               autocomplete="organization-title"
               type="text"
               pattern="^[A-Za-z\s-]{7,}$"
               placeholder="e.g. Communications Manager"
               aria-describedby="orgTitleHelp"
-            />
+            >
             <small id="orgTitleHelp" class="muted">Letters, spaces and hyphens only; minimum 7 characters.</small>
           </label>
 
@@ -96,7 +96,7 @@
               autocomplete="email"
               type="email"
               placeholder="example@company.com"
-            />
+            >
           </label>
 
           <label class="field">
@@ -108,7 +108,7 @@
               autocomplete="tel"
               type="tel"
               placeholder="+1 555-555-5555"
-            />
+            >
           </label>
 
           <label class="field">
@@ -120,13 +120,13 @@
               autocomplete="organization"
               type="text"
               placeholder="Acme Community Services"
-            />
+            >
           </label>
 
           <label class="field">
             <span class="label-text">Membership level</span>
-            <!-- using select to present 4 membership levels -->
             <select name="membership" title="Select a membership level" required>
+              <option value="" disabled selected>Select a membership level</option>
               <option value="np">NP Membership — Non-profit (no fee)</option>
               <option value="bronze">Bronze Membership</option>
               <option value="silver">Silver Membership</option>
@@ -139,10 +139,10 @@
             <textarea name="orgDescription" title="Describe your organization"></textarea>
           </label>
 
-          <!-- Hidden timestamp; set via JS on page load. Encased in a label per requirement (visually hidden). -->
+          <!-- Hidden timestamp; set via JS on page load. Kept inside a visually hidden label per your requirement. -->
           <label class="sr-only">
             <span class="label-text">Submission timestamp</span>
-            <input type="hidden" id="formTimestamp" name="timestamp" title="Form load timestamp" />
+            <input type="hidden" id="formTimestamp" name="timestamp" title="Form load timestamp">
           </label>
 
           <div class="submit-wrap">
@@ -151,7 +151,7 @@
               value="Submit Application"
               title="Submit Application"
               aria-label="Submit Application"
-            />
+            >
           </div>
         </form>
 
@@ -159,43 +159,51 @@
       </section>
     </div>
 
-    <!-- Cards panel -->
+    <!-- Cards panel: use a list for the grid to keep semantics correct -->
     <aside class="cards-panel" aria-labelledby="benefitsTitle">
       <h2 id="benefitsTitle" class="sr-only">Membership levels</h2>
 
-      <div class="cards-grid" role="list">
-        <article class="card" role="listitem" aria-labelledby="card1Title">
-          <h3 id="card1Title">NP Membership <span class="price">(np)</span></h3>
-          <p>Free for non-profit organizations — access to community resources and listing on our partners page.</p>
-          <a href="#" class="info-link" data-modal="modal-np">View benefits &raquo;</a>
-        </article>
+      <ul class="cards-grid" role="list">
+        <li class="card" role="listitem">
+          <article aria-labelledby="card1Title">
+            <h3 id="card1Title">NP Membership <span class="price">(np)</span></h3>
+            <p>Free for non-profit organizations — access to community resources and listing on our partners page.</p>
+            <a href="#" class="info-link" data-modal="modal-np">View benefits »</a>
+          </article>
+        </li>
 
-        <article class="card" role="listitem" aria-labelledby="card2Title">
-          <h3 id="card2Title">Bronze Membership <span class="price">(bronze)</span></h3>
-          <p>Intro level for small businesses — event listings, basic promotion and member newsletter.</p>
-          <a href="#" class="info-link" data-modal="modal-bronze">View benefits &raquo;</a>
-        </article>
+        <li class="card" role="listitem">
+          <article aria-labelledby="card2Title">
+            <h3 id="card2Title">Bronze Membership <span class="price">(bronze)</span></h3>
+            <p>Intro level for small businesses — event listings, basic promotion and member newsletter.</p>
+            <a href="#" class="info-link" data-modal="modal-bronze">View benefits »</a>
+          </article>
+        </li>
 
-        <article class="card" role="listitem" aria-labelledby="card3Title">
-          <h3 id="card3Title">Silver Membership <span class="price">(silver)</span></h3>
-          <p>Extra visibility with spotlight placements, event discounts and training invites.</p>
-          <a href="#" class="info-link" data-modal="modal-silver">View benefits &raquo;</a>
-        </article>
+        <li class="card" role="listitem">
+          <article aria-labelledby="card3Title">
+            <h3 id="card3Title">Silver Membership <span class="price">(silver)</span></h3>
+            <p>Extra visibility with spotlight placements, event discounts and training invites.</p>
+            <a href="#" class="info-link" data-modal="modal-silver">View benefits »</a>
+          </article>
+        </li>
 
-        <article class="card" role="listitem" aria-labelledby="card4Title">
-          <h3 id="card4Title">Gold Membership <span class="price">(gold)</span></h3>
-          <p>Premium package — featured advertising, VIP event access, and priority placement.</p>
-          <a href="#" class="info-link" data-modal="modal-gold">View benefits &raquo;</a>
-        </article>
-      </div>
+        <li class="card" role="listitem">
+          <article aria-labelledby="card4Title">
+            <h3 id="card4Title">Gold Membership <span class="price">(gold)</span></h3>
+            <p>Premium package — featured advertising, VIP event access, and priority placement.</p>
+            <a href="#" class="info-link" data-modal="modal-gold">View benefits »</a>
+          </article>
+        </li>
+      </ul>
     </aside>
 
-    <!-- Modals for each membership -->
+    <!-- Modals (unchanged structurally) -->
     <div id="modal-np" class="modal-overlay" role="presentation" aria-hidden="true">
       <div class="modal" role="dialog" aria-modal="true" aria-labelledby="npTitle" data-modalname="np">
         <header>
           <h3 id="npTitle">NP Membership — benefits (no fee)</h3>
-          <button class="close-btn" data-close>Close</button>
+          <button class="close-btn" data-close aria-label="Close dialog">Close</button>
         </header>
         <div>
           <p><strong>Cost:</strong> None (proof of non-profit status required)</p>
@@ -212,7 +220,7 @@
       <div class="modal" role="dialog" aria-modal="true" aria-labelledby="bronzeTitle" data-modalname="bronze">
         <header>
           <h3 id="bronzeTitle">Bronze Membership — benefits</h3>
-          <button class="close-btn" data-close>Close</button>
+          <button class="close-btn" data-close aria-label="Close dialog">Close</button>
         </header>
         <div>
           <p><strong>Cost:</strong> Affordable entry-level</p>
@@ -229,7 +237,7 @@
       <div class="modal" role="dialog" aria-modal="true" aria-labelledby="silverTitle" data-modalname="silver">
         <header>
           <h3 id="silverTitle">Silver Membership — benefits</h3>
-          <button class="close-btn" data-close>Close</button>
+          <button class="close-btn" data-close aria-label="Close dialog">Close</button>
         </header>
         <div>
           <p><strong>Cost:</strong> Mid-tier</p>
@@ -246,7 +254,7 @@
       <div class="modal" role="dialog" aria-modal="true" aria-labelledby="goldTitle" data-modalname="gold">
         <header>
           <h3 id="goldTitle">Gold Membership — benefits</h3>
-          <button class="close-btn" data-close>Close</button>
+          <button class="close-btn" data-close aria-label="Close dialog">Close</button>
         </header>
         <div>
           <p><strong>Cost:</strong> Premium</p>
@@ -260,6 +268,5 @@
     </div>
 
   </main>
-
 </body>
 </html>
