@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ikorodu Chambers Of Commerce | Lagos, Nigeria</title>
+  <meta name="description" content="Ikorodu Chambers Of Commerce is a leading business organization in Lagos, Nigeria, dedicated to promoting trade and commerce in the Ikorodu region.">
+  <meta name="keywords" content="Ikorodu Chambers Of Commerce, Ikorodu business, Lagos commerce, Nigeria trade, business directory, join Ikorodu Chambers">
+  <meta name="author" content="Elujoba Oluwaseyi Ebenezer">
+  <!-- styles -->
+  <link rel="stylesheet" href="styles/mobile.css">
+  <link rel="stylesheet" href="styles/desktop.css">
+  <!-- scripts -->
+  <script src="scripts/main.js" defer></script>
+  <script src="scripts/join.js" defer></script>
+  <!-- favicon -->
+  <link rel="icon" href="images/ikd.ico" type="image/x-icon">
+  <!-- fonts styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <!-- social media meta -->
+  <meta property="og:title" content="Ikorodu Chambers Of Commerce | Lagos, Nigeria">
+  <meta property="og:description" content="Ikorodu Chambers Of Commerce is a leading business organization in Lagos, Nigeria, dedicated to promoting trade and commerce in the Ikorodu region.">
+  <meta property="og:image" content="images/og-image.jpg">
+  <meta property="og:url" content="https://ikoroduchambers.com">
+  <meta name="twitter:card" content="summary_large_image">
+
+</head>
+<body>
+    <header>
+    <div class="logo">
+      <a href=""><img src="images/ikd-logo.webp" alt="Ikorodu Chambers Of Commerce Logo" width="120"></a>
+    </div>
+    <div class="entityIcon">
+      <button id="darkLightMode">&#x1F319;</button>
+      <button id="hamburgerMenu">&#9776;</button>
+    </div>
+  </header>
+  <nav class="topNav">
+    <ul id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="directory.html">Directory</a></li>
+      <li><a href="discover.html">Discover</a></li>
+      <li><a href="join.html">Join</a></li>
+      <li><a href="thankyou.html"></a></li>
+    </ul>
+  </nav>
+    <main class="wrap" id="main">
+    <div>
+      <header>
+        <div>
+          <h1>Chamber Membership Application</h1>
+          <p class="lead">Complete the short form to apply for a membership level.</p>
+        </div>
+        <div class="muted">Accessible • Keyboard-friendly • Animated cards</div>
+      </header>
+
+      <section class="form-card" aria-labelledby="formTitle">
+        <h2 id="formTitle" class="sr-only">Membership application form</h2>
+
+        <form method="get" action="thankyou.html" id="membershipForm" novalidate>
+          <div class="row">
+            <label class="field">
+              <span class="label-text">First name <span aria-hidden="true" style="color:#d00">*</span></span>
+              <input required name="firstName" title="Applicant's first name" autocomplete="given-name" type="text" placeholder="Given name" />
+            </label>
+
+            <label class="field">
+              <span class="label-text">Last name <span aria-hidden="true" style="color:#d00">*</span></span>
+              <input required name="lastName" title="Applicant's last name" autocomplete="family-name" type="text" placeholder="Family name" />
+            </label>
+          </div>
+
+          <label class="field">
+            <span class="label-text">Organizational title</span>
+            <input
+              name="orgTitle"
+              title="Applicants position or title within their organization"
+              autocomplete="organization-title"
+              type="text"
+              pattern="^[A-Za-z\s-]{7,}$"
+              placeholder="e.g. Communications Manager"
+              aria-describedby="orgTitleHelp"
+            />
+            <small id="orgTitleHelp" class="muted">Letters, spaces and hyphens only; minimum 7 characters.</small>
+          </label>
+
+          <label class="field">
+            <span class="label-text">Email address <span aria-hidden="true" style="color:#d00">*</span></span>
+            <input
+              required
+              name="email"
+              title="Applicant's email address"
+              autocomplete="email"
+              type="email"
+              placeholder="example@company.com"
+            />
+          </label>
+
+          <label class="field">
+            <span class="label-text">Mobile phone <span aria-hidden="true" style="color:#d00">*</span></span>
+            <input
+              required
+              name="mobile"
+              title="Applicant's mobile phone number"
+              autocomplete="tel"
+              type="tel"
+              placeholder="+1 555-555-5555"
+            />
+          </label>
+
+          <label class="field">
+            <span class="label-text">Business / Organization name <span aria-hidden="true" style="color:#d00">*</span></span>
+            <input
+              required
+              name="organization"
+              title="Business or organization name"
+              autocomplete="organization"
+              type="text"
+              placeholder="Acme Community Services"
+            />
+          </label>
+
+          <label class="field">
+            <span class="label-text">Membership level</span>
+            <!-- using select to present 4 membership levels -->
+            <select name="membership" title="Select a membership level" required>
+              <option value="np">NP Membership — Non-profit (no fee)</option>
+              <option value="bronze">Bronze Membership</option>
+              <option value="silver">Silver Membership</option>
+              <option value="gold">Gold Membership</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span class="label-text">Organization description</span>
+            <textarea name="orgDescription" title="Describe your organization"></textarea>
+          </label>
+
+          <!-- Hidden timestamp; set via JS on page load. Encased in a label per requirement (visually hidden). -->
+          <label class="sr-only">
+            <span class="label-text">Submission timestamp</span>
+            <input type="hidden" id="formTimestamp" name="timestamp" title="Form load timestamp" />
+          </label>
+
+          <div class="submit-wrap">
+            <input
+              type="submit"
+              value="Submit Application"
+              title="Submit Application"
+              aria-label="Submit Application"
+            />
+          </div>
+        </form>
+
+        <footer><small class="muted">All required fields marked with *</small></footer>
+      </section>
+    </div>
+
+    <!-- Cards panel -->
+    <aside class="cards-panel" aria-labelledby="benefitsTitle">
+      <h2 id="benefitsTitle" class="sr-only">Membership levels</h2>
+
+      <div class="cards-grid" role="list">
+        <article class="card" role="listitem" aria-labelledby="card1Title">
+          <h3 id="card1Title">NP Membership <span class="price">(np)</span></h3>
+          <p>Free for non-profit organizations — access to community resources and listing on our partners page.</p>
+          <a href="#" class="info-link" data-modal="modal-np">View benefits &raquo;</a>
+        </article>
+
+        <article class="card" role="listitem" aria-labelledby="card2Title">
+          <h3 id="card2Title">Bronze Membership <span class="price">(bronze)</span></h3>
+          <p>Intro level for small businesses — event listings, basic promotion and member newsletter.</p>
+          <a href="#" class="info-link" data-modal="modal-bronze">View benefits &raquo;</a>
+        </article>
+
+        <article class="card" role="listitem" aria-labelledby="card3Title">
+          <h3 id="card3Title">Silver Membership <span class="price">(silver)</span></h3>
+          <p>Extra visibility with spotlight placements, event discounts and training invites.</p>
+          <a href="#" class="info-link" data-modal="modal-silver">View benefits &raquo;</a>
+        </article>
+
+        <article class="card" role="listitem" aria-labelledby="card4Title">
+          <h3 id="card4Title">Gold Membership <span class="price">(gold)</span></h3>
+          <p>Premium package — featured advertising, VIP event access, and priority placement.</p>
+          <a href="#" class="info-link" data-modal="modal-gold">View benefits &raquo;</a>
+        </article>
+      </div>
+    </aside>
+
+    <!-- Modals for each membership -->
+    <div id="modal-np" class="modal-overlay" role="presentation" aria-hidden="true">
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="npTitle" data-modalname="np">
+        <header>
+          <h3 id="npTitle">NP Membership — benefits (no fee)</h3>
+          <button class="close-btn" data-close>Close</button>
+        </header>
+        <div>
+          <p><strong>Cost:</strong> None (proof of non-profit status required)</p>
+          <ul>
+            <li>Listing in our partners & resources directory</li>
+            <li>One complimentary event listing per quarter</li>
+            <li>Access to member-only newsletters and community forums</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-bronze" class="modal-overlay" role="presentation" aria-hidden="true">
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="bronzeTitle" data-modalname="bronze">
+        <header>
+          <h3 id="bronzeTitle">Bronze Membership — benefits</h3>
+          <button class="close-btn" data-close>Close</button>
+        </header>
+        <div>
+          <p><strong>Cost:</strong> Affordable entry-level</p>
+          <ul>
+            <li>Business listing and category placement</li>
+            <li>Monthly newsletter feature rotation</li>
+            <li>Discounted ticket pricing to local events</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-silver" class="modal-overlay" role="presentation" aria-hidden="true">
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="silverTitle" data-modalname="silver">
+        <header>
+          <h3 id="silverTitle">Silver Membership — benefits</h3>
+          <button class="close-btn" data-close>Close</button>
+        </header>
+        <div>
+          <p><strong>Cost:</strong> Mid-tier</p>
+          <ul>
+            <li>Priority listing and rotating spotlight on homepage</li>
+            <li>Free/discounted workshops and training sessions</li>
+            <li>Enhanced event promotion and social media shoutouts</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-gold" class="modal-overlay" role="presentation" aria-hidden="true">
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="goldTitle" data-modalname="gold">
+        <header>
+          <h3 id="goldTitle">Gold Membership — benefits</h3>
+          <button class="close-btn" data-close>Close</button>
+        </header>
+        <div>
+          <p><strong>Cost:</strong> Premium</p>
+          <ul>
+            <li>Featured advertising/spotlight on homepage</li>
+            <li>VIP invitations and speaker opportunities at major events</li>
+            <li>Dedicated promotion and priority support from the chamber team</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+</body>
+</html>

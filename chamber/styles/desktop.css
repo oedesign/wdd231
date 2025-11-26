@@ -36,3 +36,52 @@
 .forecast-day .label { font-size: 13px; color: var(--text-muted); margin-bottom: 4px; }
 .forecast-day .temp { font-size: 18px; font-weight: 700; color: var(--text-color); }
 .small { font-size: 12px; color: var(--text-muted); }
+
+ /* Join page */
+
+     /* layout: on wider screens show form left, cards right */
+    @media(min-width:900px){
+      .wrap{
+        grid-template-columns: 1fr 360px;
+        align-items:start;
+      }
+    }
+
+    /* form card */
+    .form-card{
+      background:var(--card);
+      border-radius:10px;
+      padding:20px;
+      box-shadow:0 6px 18px rgba(20,30,60,0.08);
+    }
+    form .field{
+      display:block;
+      margin-bottom:14px;
+    }
+    label{
+      display:block;
+      font-size:.92rem;
+      color:#123;
+    }
+    label span.label-text{display:inline-block;margin-bottom:6px;font-weight:600;}
+    label input, label textarea, label select{
+      margin-top:4px;
+      width:100%;
+      box-sizing:border-box;
+      padding:10px 12px;
+      border-radius:8px;
+      border:1px solid #d6dbe8;
+      font-size:1rem;
+      font-family:inherit;
+    }
+    label textarea{min-height:100px;resize:vertical;}
+    input:focus, textarea:focus, select:focus{
+      outline:3px solid rgba(11,110,253,0.15);
+      border-color:var(--accent);
+    }
+
+    .row{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:12px;
+    }
