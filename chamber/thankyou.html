@@ -1,39 +1,31 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Thank You — Membership Application</title>
-  <style>
-    body{
-      margin:0;
-      font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
-      background:#f4f7fb;
-      color:#0b1830;
-      min-height:100vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:28px;
-    }
-    .card{
-      width:100%;
-      max-width:760px;
-      background:white;
-      border-radius:12px;
-      padding:22px;
-      box-shadow:0 8px 32px rgba(12,20,40,0.08);
-    }
-    h1{margin:0 0 6px 0;}
-    p.lead{color:#40507a;margin:0 0 18px 0;}
-    dl{display:grid;grid-template-columns:160px 1fr;gap:10px 18px;color:#123;}
-    dt{font-weight:700;color:#1a2b48}
-    dd{margin:0;color:#233142}
-    .muted{color:#64708a;font-size:.95rem;margin-top:14px}
-    a.button{
-      display:inline-block;margin-top:16px;background:#0b6efd;color:white;padding:10px 14px;border-radius:8px;text-decoration:none;
-    }
-  </style>
+  <!-- meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ikorodu Chambers Of Commerce | Lagos, Nigeria</title>
+  <meta name="description" content="Ikorodu Chambers Of Commerce is a leading business organization in Lagos, Nigeria, dedicated to promoting trade and commerce in the Ikorodu region.">
+  <meta name="keywords" content="Ikorodu Chambers Of Commerce, Ikorodu business, Lagos commerce, Nigeria trade, business directory, join Ikorodu Chambers">
+  <meta name="author" content="Elujoba Oluwaseyi Ebenezer">
+  <!-- styles -->
+  <!-- <link rel="stylesheet" href="styles/mobile.css">
+  <link rel="stylesheet" href="styles/desktop.css"> -->
+  <link rel="stylesheet" href="styles/thankyou.css">
+  <!-- scripts -->
+  <script src="scripts/thankyou.js" defer></script>
+  <!-- favicon -->
+  <link rel="icon" href="images/ikd.ico" type="image/x-icon">
+  <!-- fonts styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <!-- social media meta -->
+  <meta property="og:title" content="Ikorodu Chambers Of Commerce | Lagos, Nigeria">
+  <meta property="og:description" content="Ikorodu Chambers Of Commerce is a leading business organization in Lagos, Nigeria, dedicated to promoting trade and commerce in the Ikorodu region.">
+  <meta property="og:image" content="images/og-image.jpg">
+  <meta property="og:url" content="https://ikoroduchambers.com">
+  <meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
   <main class="card" id="main">
@@ -55,51 +47,5 @@
     <p class="muted">If you need to make changes, please <a href="index.html">return to the form</a> and submit again.</p>
     <a class="button" href="index.html">Back to application</a>
   </main>
-
-  <script>
-    // Parse query string and display required fields.
-    (function displaySubmitted(){
-      const params = new URLSearchParams(window.location.search);
-
-      function out(key, elId) {
-        const el = document.getElementById(elId);
-        const val = params.get(key);
-        if (!el) return;
-        if (!val) {
-          el.textContent = '—';
-          return;
-        }
-        // For safety, escape output (simple)
-        el.textContent = val;
-      }
-
-      out('firstName','out-firstName');
-      out('lastName','out-lastName');
-      out('email','out-email');
-      out('mobile','out-mobile');
-      out('organization','out-organization');
-
-      // timestamp may be in ISO local format - show as-is but also make it more human if possible
-      const tsRaw = params.get('timestamp');
-      const outTs = document.getElementById('out-timestamp');
-      if (tsRaw) {
-        // Try to parse as local ISO-like string "YYYY-MM-DDTHH:MM:SS"
-        let human = tsRaw;
-        try {
-          // insert timezone offset by treating it as local: Date constructor will treat "YYYY-MM-DDTHH:MM:SS" as local
-          const d = new Date(tsRaw);
-          if (!isNaN(d.getTime())) {
-            human = d.toLocaleString(undefined, {dateStyle:'medium', timeStyle:'short'});
-          }
-        } catch(e){}
-        outTs.textContent = human;
-      } else {
-        outTs.textContent = '—';
-      }
-
-      // For accessibility: move focus to the heading so screen reader users hear the notification
-      document.getElementById('main').focus?.();
-    })();
-  </script>
 </body>
 </html>
