@@ -59,23 +59,32 @@ header {
 /* Top nav toggle (mobile) */
 .topNav { display: none; }
 
-/* NAV - consolidated */
+/* NAV - consolidated
+   NOTE: default (mobile/overlay) shows nav with primary-color background.
+   Mobile/style with dark background must have high-contrast (white) text.
+*/
 nav #nav-links {
   display: flex;
   justify-content: center;
   flex-direction: column;
   list-style: none;
-  background-color: var(--primary-color);
+  background-color: var(--primary-color); /* mobile / overlay state */
+  padding: 0.5rem 0;
 }
+
+/* Mobile/overlay nav links (high contrast white) */
 nav #nav-links li { padding: 0.625rem; cursor: pointer; }
 nav #nav-links li a {
   font-size: 1.125rem;
   text-decoration: none;
   display: block;
   text-align: center;
-  color: var(--text-inverse);
+  color: var(--text-inverse); /* strong contrast on primary color */
 }
 
+/* Desktop override (below) sets the nav background to transparent and
+   switches the text to dark; see @media(min-width:868px) */
+ 
 /* Controls in header */
 #hamburgerMenu {
   font-size: 1.75rem;
@@ -300,7 +309,7 @@ p.lead { margin: 0.375rem 0 0; color: var(--muted); font-size: 0.95rem; }
 /* submit */
 .submit-wrap { display:flex; justify-content:flex-end; margin-top: 0.625rem; }
 input[type="submit"]{
-  background: var(--accent);
+  background: var(--primary-color);
   color: white;
   padding: 0.625rem 1.125rem;
   border-radius: 8px;
@@ -338,20 +347,27 @@ input[type="submit"]:focus{ box-shadow: 0 0 0 4px rgba(11,110,253,0.12); }
 }
 .card h3 { margin: 0; font-size: 1rem; }
 .card p { margin: 0; color: var(--muted); font-size: 0.92rem; }
-.card a.info-link { margin-top: 0.5rem; color: var(--accent); text-decoration: none; font-weight: 600; }
-.card .price { font-weight: 700; color: var(--accent); font-size: 0.98rem; }
+.card a.info-link { margin-top: 0.5rem; color: var(--primary-color); text-decoration: none; font-weight: 600; }
+.card .price { font-weight: 700; color: var(--primary-color); font-size: 0.98rem; }
 
 /* modal */
+/* IMPORTANT: ensure any overlay-level UI that might contain text is readable.
+   We set overlay text to white (high contrast against overlay), but keep the
+   modal panel itself as white background with dark text.
+*/
 .modal-overlay {
   position: fixed;
   inset: 0;
   display: none;
   align-items: center;
   justify-content: center;
-  background: rgba(12,20,40,0.45);
+  background: rgba(12,20,40,0.55); /* increased from 0.45 -> 0.55 for stronger visual separation */
   z-index: 2000;
+  color: var(--text-inverse); /* overlay-level text (if any) will be white and readable */
 }
 .modal-overlay.open { display:flex; }
+
+/* ensure the modal panel itself has the original dark-on-light colors */
 .modal {
   background: var(--card);
   width: min(720px, 96%);
@@ -360,16 +376,21 @@ input[type="submit"]:focus{ box-shadow: 0 0 0 4px rgba(11,110,253,0.12); }
   box-shadow: 0 18px 40px rgba(10,20,40,0.35);
   max-height: 86vh;
   overflow: auto;
+  color: var(--text-color); /* explicit: keep modal text dark on white */
 }
 .modal header { display:flex; justify-content:space-between; align-items:center; gap:0.5rem; }
+
+/* Close button: adjust color to meet contrast on its light background */
 .close-btn {
   background: #f2f4ff;
   border: 1px solid #e1e8ff;
-  color: var(--accent);
+  color: var(--primary-color); /* changed from bright blue to --primary-color for >4.5:1 contrast */
   padding: 0.375rem 0.5rem;
   border-radius: 8px;
   cursor:pointer;
 }
+
+/* keep utility sr-only pattern */
 .sr-only {
   position:absolute!important;
   height:1px; width:1px;
@@ -397,3 +418,4 @@ footer {
 
 /* small utility */
 .muted { color: var(--muted); }
+

@@ -1,4 +1,4 @@
-/* Responsive / Desktop overrides */
+/* This is for desktop /* Responsive / Desktop overrides */
 @media screen and (min-width: 868px) {
    .topNav { display: flex; }
 
@@ -10,12 +10,15 @@
        right: 50px;
    }
 
+   /* Desktop: transparent nav, dark text — override mobile high-contrast white */
    nav #nav-links {
        flex-direction: row;
        list-style-type: none;
        background-color: transparent;
+       padding: 0;
    }
 
+   /* desktop links should use the page text color */
    nav #nav-links li a { color: var(--text-color); }
 
    #hamburgerMenu { display: none; }

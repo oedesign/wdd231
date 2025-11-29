@@ -11,6 +11,8 @@
   <!-- styles -->
   <link rel="stylesheet" href="styles/mobile.css">
   <link rel="stylesheet" href="styles/desktop.css">
+  <!-- form-specific styles (new) -->
+  <link rel="stylesheet" href="styles/forms.css">
   <!-- scripts -->
   <script src="scripts/main.js" defer></script>
   <script src="scripts/join.js" defer></script>
@@ -23,7 +25,7 @@
   <!-- social media meta -->
   <meta property="og:title" content="Ikorodu Chambers Of Commerce | Lagos, Nigeria">
   <meta property="og:description" content="Ikorodu Chambers Of Commerce is a leading business organization in Lagos, Nigeria, dedicated to promoting trade and commerce in the Ikorodu region.">
-  <meta property="og:image" content="images/og-image.jpg">
+  <meta property="og:image" content="https://oedesign.github.io/wdd231/images/ikd-logo.webp">
   <meta property="og:url" content="https://ikoroduchambers.com">
   <meta name="twitter:card" content="summary_large_image">
 </head>
@@ -54,7 +56,7 @@
           <h1>Chamber Membership Application</h1>
           <p class="lead">Complete the short form to apply for a membership level.</p>
         </div>
-        <div class="muted">Accessible • Keyboard-friendly • Animated cards</div>
+        <!-- <div class="muted">Accessible • Keyboard-friendly • Animated cards</div> -->
       </header>
 
       <section class="form-card" aria-labelledby="formTitle">
@@ -63,12 +65,12 @@
         <form method="get" action="thankyou.html" id="membershipForm" novalidate>
           <div class="row">
             <label class="field">
-              <span class="label-text">First name <span aria-hidden="true" style="color:#d00">*</span></span>
+              <span class="label-text">First name <span class="required-star" aria-hidden="true">*</span></span>
               <input required name="firstName" title="Applicant's first name" autocomplete="given-name" type="text" placeholder="Given name">
             </label>
 
             <label class="field">
-              <span class="label-text">Last name <span aria-hidden="true" style="color:#d00">*</span></span>
+              <span class="label-text">Last name <span class="required-star" aria-hidden="true">*</span></span>
               <input required name="lastName" title="Applicant's last name" autocomplete="family-name" type="text" placeholder="Family name">
             </label>
           </div>
@@ -88,7 +90,7 @@
           </label>
 
           <label class="field">
-            <span class="label-text">Email address <span aria-hidden="true" style="color:#d00">*</span></span>
+            <span class="label-text">Email address <span class="required-star" aria-hidden="true">*</span></span>
             <input
               required
               name="email"
@@ -100,7 +102,7 @@
           </label>
 
           <label class="field">
-            <span class="label-text">Mobile phone <span aria-hidden="true" style="color:#d00">*</span></span>
+            <span class="label-text">Mobile phone <span class="required-star" aria-hidden="true">*</span></span>
             <input
               required
               name="mobile"
@@ -112,7 +114,7 @@
           </label>
 
           <label class="field">
-            <span class="label-text">Business / Organization name <span aria-hidden="true" style="color:#d00">*</span></span>
+            <span class="label-text">Business / Organization name <span class="required-star" aria-hidden="true">*</span></span>
             <input
               required
               name="organization"
@@ -268,5 +270,11 @@
     </div>
 
   </main>
+
+   <footer>
+    <p>&copy; <span id="currentyear"></span> IKD Chambers Of Commerce</p>
+    <p>Last Modified: <span id="lastmodified"></span></p>
+  </footer>
+  
 </body>
 </html>
