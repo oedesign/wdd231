@@ -31,8 +31,8 @@ body {
   font-family: "Roboto", sans-serif;
   color: var(--text-color);
   background-color: var(--background-color);
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
+  /* -webkit-font-smoothing:antialiased; */
+  /* -moz-osx-font-smoothing:grayscale; */
   line-height: 1.45;
 }
 
@@ -394,7 +394,7 @@ input[type="submit"]:focus{ box-shadow: 0 0 0 4px rgba(11,110,253,0.12); }
 .sr-only {
   position:absolute!important;
   height:1px; width:1px;
-  overflow:hidden; clip:rect(1px,1px,1px,1px);
+  /* overflow:hidden; clip:rect(1px,1px,1px,1px); */
   white-space:nowrap;
 }
 
