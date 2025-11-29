@@ -1,0 +1,84 @@
+/* styles/forms.css
+   Form-specific styles and replacements for removed inline styles.
+   Import this file after your base CSS so these rules take effect.
+*/
+
+/* visually hidden (common sr-only pattern) */
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* required star replacement for removed inline styles */
+.required-star {
+  color: #d00;
+  font-weight: 700;
+  margin-left: 0.15em;
+  /* keep from being read by screen readers -- aria-hidden is already set */
+}
+
+/* small muted helper text */
+.muted {
+  color: #6b7280; /* neutral muted gray */
+  font-size: 0.9rem;
+}
+
+/* basic layout helpers used by page (optional; add or remove to match your design) */
+.field {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.label-text {
+  display: inline-block;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+
+/* submit wrapper */
+.submit-wrap input[type="submit"] {
+  background: #0E3A5D;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.submit-wrap input[type="submit"]:hover {
+  background: #0E3A5D;
+}
+
+/* simple accessible focus outline for inputs */
+input:not([type="hidden"]), select, textarea {
+  border: 1px solid #cbd5e1;
+  padding: 0.5rem;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: 3px solid rgba(11, 94, 215, 0.18);
+  outline-offset: 2px;
+}
+
+/* prices / small variant */
+.price {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #374151;
+}
