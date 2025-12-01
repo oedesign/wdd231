@@ -59,8 +59,9 @@
         <!-- <div class="muted">Accessible • Keyboard-friendly • Animated cards</div> -->
       </header>
 
+      <!-- added a hidden h2 to satisfy aria-labelledby on the section -->
+      <h2 id="formTitle" class="sr-only">Membership application form</h2>
       <section class="form-card" aria-labelledby="formTitle">
-        <!-- <h2 id="formTitle" class="sr-only">Membership application form</h2> -->
 
         <form method="get" action="thankyou.html" id="membershipForm" novalidate>
           <div class="row">
@@ -161,12 +162,12 @@
       </section>
     </div>
 
-    <!-- Cards panel: use a list for the grid to keep semantics correct -->
+    <!-- Added a hidden heading so the aside's aria-labelledby points to an element in the document -->
+    <h2 id="benefitsTitle" class="sr-only">Membership levels</h2>
+    <!-- Cards panel: native list semantics are sufficient, removed role="list" -->
     <aside class="cards-panel" aria-labelledby="benefitsTitle">
-      <!-- <h2 id="benefitsTitle" class="sr-only">Membership levels</h2> -->
-
-      <ul class="cards-grid" role="list">
-        <li class="card" role="listitem">
+      <ul class="cards-grid">
+        <li class="card">
           <article aria-labelledby="card1Title">
             <h3 id="card1Title">NP Membership <span class="price">(np)</span></h3>
             <p>Free for non-profit organizations — access to community resources and listing on our partners page.</p>
@@ -174,7 +175,7 @@
           </article>
         </li>
 
-        <li class="card" role="listitem">
+        <li class="card">
           <article aria-labelledby="card2Title">
             <h3 id="card2Title">Bronze Membership <span class="price">(bronze)</span></h3>
             <p>Intro level for small businesses — event listings, basic promotion and member newsletter.</p>
@@ -182,7 +183,7 @@
           </article>
         </li>
 
-        <li class="card" role="listitem">
+        <li class="card">
           <article aria-labelledby="card3Title">
             <h3 id="card3Title">Silver Membership <span class="price">(silver)</span></h3>
             <p>Extra visibility with spotlight placements, event discounts and training invites.</p>
@@ -190,7 +191,7 @@
           </article>
         </li>
 
-        <li class="card" role="listitem">
+        <li class="card">
           <article aria-labelledby="card4Title">
             <h3 id="card4Title">Gold Membership <span class="price">(gold)</span></h3>
             <p>Premium package — featured advertising, VIP event access, and priority placement.</p>
