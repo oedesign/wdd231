@@ -161,10 +161,10 @@ nav #nav-links li a {
 
 /* list-specific card layout (keeps centered content) */
 #membersContainer.list .member-card {
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   gap: 1rem;
-  text-align: left;
+  text-align: center;
 }
 #membersContainer.list .member-card img {
   width: 80px;
