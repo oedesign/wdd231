@@ -1,0 +1,43 @@
+:root {
+    --primary: #1a5e3f;   /* Dark Green - headings, accents */
+    --secondary: #f2c94c; /* Warm Yellow - highlights, buttons */
+    --light: #f8f8f8;     /* Light background */
+    --dark: #222;         /* Body text */
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--light);
+    color: var(--dark);
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: var(--primary);
+    font-family: "Georgia", serif;
+}
+
+header {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 3px solid var(--primary);
+    margin-bottom: 20px;
+}
+
+section {
+    background: white;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-left: 5px solid var(--primary);
+    border-radius: 4px;
+}
+
+.wireframe {
+    background: #eee;
+    padding: 15px;
+    font-family: monospace;
+    white-space: pre;
+    overflow-x: auto;
+}
