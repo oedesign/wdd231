@@ -94,7 +94,6 @@ nav #nav-links li a {
   border-radius: 50%;
   color: var(--text-color);
   position: relative;
-  top: 18px;
 }
 
 /* Main area */
