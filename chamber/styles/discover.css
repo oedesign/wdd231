@@ -1,0 +1,259 @@
+:root{
+  --bg:#f8fafc;
+  --card:#ffffff;
+  --accent:#0E3A5D;
+  --muted:#6b7280;
+  --max-width:1200px;
+  --gap:1rem;
+  --radius:8px;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color-scheme: light;
+}
+
+/* Reset-ish */
+:root {
+  --primary-color: #0E3A5D;      /* rgb(14,58,93) */
+  --secondary-color: #FFA500;
+  --background-color: #FFFFFF;   /* page background */
+  --panel-bg: #FFFFFF;           /* card/panel backgrounds */
+  --text-color: #111111;         /* main text on light bg */
+  --text-muted: #444444;         /* secondary text on light bg */
+  --text-inverse: #FFFFFF;       /* text on dark backgrounds */
+  --card-border: #ddd;
+  --gap: 16px;                   /* unified gap */
+  --accent: #0E3A5D;             /* used on join page */
+  --maxw: 1100px;
+  --muted: #666;
+  --bg: #f7f8fa;
+  --card: #fff;
+}
+
+/* Typography */
+html { font-size: 16px; } /* 1rem = 16px */
+body {
+  font-family: "Roboto", sans-serif;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  /* -webkit-font-smoothing:antialiased; */
+  /* -moz-osx-font-smoothing:grayscale; */
+  line-height: 1.45;
+}
+
+/* Headings */
+h1, h2 {
+  color: var(--text-color);
+  text-align: center;
+}
+h1 { font-size: 1.75rem; margin-bottom: 0.75rem; }
+h2 { margin-top: 0.625rem; }
+
+/* =========================
+   Header / Nav
+   ========================= */
+header {
+  background-color: var(--background-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem; /* 20px */
+  gap: var(--gap);
+}
+
+/* Top nav toggle (mobile) */
+.topNav { display: none; }
+
+/* NAV - consolidated
+   NOTE: default (mobile/overlay) shows nav with primary-color background.
+   Mobile/style with dark background must have high-contrast (white) text.
+*/
+nav #nav-links {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  list-style: none;
+  background-color: var(--primary-color); /* mobile / overlay state */
+  padding: 0.5rem 0;
+}
+
+/* Mobile/overlay nav links (high contrast white) */
+nav #nav-links li { padding: 0.625rem; cursor: pointer; }
+nav #nav-links li a {
+  font-size: 1.125rem;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  color: var(--text-inverse); /* strong contrast on primary color */
+}
+
+/* Desktop override (below) sets the nav background to transparent and
+   switches the text to dark; see @media(min-width:868px) */
+ 
+/* Controls in header */
+#hamburgerMenu {
+  font-size: 1.75rem;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+#darkLightMode {
+  font-size: 1.125rem;
+  cursor: pointer;
+  border: none;
+  background-color: lightgray;
+  margin-right: 0.625rem;
+  padding: 0.3125rem;
+  border-radius: 50%;
+  color: var(--text-color);
+}
+
+/* Main area */
+.discover-main{max-width:var(--max-width);margin:0 auto;padding:0 1rem}
+.hero2{background:linear-gradient(90deg,#eef6ff,#ffffff);padding:1.25rem;border-radius:10px;margin-bottom:1rem}
+.hero2 h2{margin:0 0 .25rem 0}
+.lead{margin:0;color:var(--muted); text-align: center;}
+
+/* Visit message */
+.visit-message{
+  background: #fffbe6;
+  border-left:4px solid #ffd166;
+  padding:0.75rem 1rem;
+  border-radius:8px;
+  margin-bottom:1rem;
+  font-weight:600;
+  color:#6b4b00;
+}
+
+/* Grid container - uses named areas */
+.places-grid{
+  display:grid;
+  gap:var(--gap);
+  align-items:start;
+  /* default small screen layout: single column */
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "item1"
+    "item2"
+    "item3"
+    "item4"
+    "item5"
+    "item6"
+    "item7"
+    "item8";
+  margin-bottom:2rem;
+}
+
+/* Card styles */
+.place-card{
+  background:var(--card);
+  border-radius:var(--radius);
+  box-shadow:0 1px 3px rgba(15,23,42,0.05);
+  padding:0.5rem;
+  display:flex;
+  flex-direction:column;
+  gap:0.5rem;
+  min-height:120px;
+}
+.place-card h2{margin:0;font-size:1.05rem;color:var(--accent)}
+.place-card address{font-style:normal;color:var(--muted);font-size:.9rem}
+.place-card p{margin:0;color:#334155}
+.place-card .card-media{overflow:hidden;border-radius:6px;display:block}
+.place-card figure{margin:0}
+.place-card img{width:100%;height:auto;display:block;object-fit:cover}
+
+/* Button */
+.btn{
+  margin-top:auto;
+  align-self:flex-start;
+  background:var(--accent);
+  color:white;
+  border:0;
+  padding:0.5rem 0.75rem;
+  border-radius:6px;
+  cursor:pointer;
+  text-decoration:none;
+  font-weight:600;
+}
+.btn:focus{outline:3px solid #cfe0ff; outline-offset:2px}
+
+/* Card assignments to grid areas */
+.place-card.item1{grid-area:item1}
+.place-card.item2{grid-area:item2}
+.place-card.item3{grid-area:item3}
+.place-card.item4{grid-area:item4}
+.place-card.item5{grid-area:item5}
+.place-card.item6{grid-area:item6}
+.place-card.item7{grid-area:item7}
+.place-card.item8{grid-area:item8}
+
+/* Hover image effect - only applied for pointers and larger screens (disabled on touch/small) */
+@media (min-width:641px) and (hover: hover) and (pointer: fine) {
+  .place-card img{
+    transition: transform 300ms ease, filter 300ms ease, box-shadow 300ms ease;
+    transform-origin: center;
+  }
+  .place-card:hover img{
+    transform: scale(1.04) rotate(-0.5deg);
+    filter: saturate(1.08) contrast(1.02);
+    box-shadow: 0 6px 18px rgba(11,95,255,0.12);
+  }
+}
+
+/* Medium screens (641px - 1024px): two columns, staggered named areas layout */
+@media (min-width:641px) and (max-width:1024px){
+  .places-grid{
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "item1 item2"
+      "item3 item4"
+      "item5 item6"
+      "item7 item8";
+  }
+  .nav-toggle{display:inline-block}
+  .nav-list{display:flex}
+  .nav-list.open{display:block}
+}
+
+/* Large screens (1025px and up): four-column layout using named areas (can be rearranged for visual grouping) */
+@media (min-width:1025px){
+  .places-grid{
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "item1 item2 item3 item4"
+      "item5 item6 item7 item8";
+  }
+}
+
+/* Accessibility / focus states and small tweaks */
+.place-card:focus-within{box-shadow:0 6px 18px rgba(11,95,255,0.08)}
+.address-small{font-size:0.9rem;color:var(--muted)}
+/* ensure no horizontal scroll */
+html,body{overflow-x:hidden}
+
+/* This is for desktop /* Responsive / Desktop overrides */
+@media screen and (min-width: 868px) {
+   .topNav { display: flex; }
+
+   nav {
+       max-width: 350px;
+       margin-left: auto;
+       position: relative;
+       top: -80px;
+       right: 50px;
+   }
+
+   /* Desktop: transparent nav, dark text — override mobile high-contrast white */
+   nav #nav-links {
+       flex-direction: row;
+       list-style-type: none;
+       background-color: transparent;
+       padding: 0;
+   }
+   /* desktop links should use the page text color */
+   nav #nav-links li a { color: var(--text-color); }
+
+   #hamburgerMenu { display: none; }
+
+   main { position: relative; top: -41.6px; }
+
+}
+

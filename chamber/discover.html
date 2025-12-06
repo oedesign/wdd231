@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Discover — Chamber of Commerce</title>
+   <meta name="description" content="Ikorodu Chambers Of Commerce is a leading business organization in Lagos, Nigeria, dedicated to promoting trade and commerce in the Ikorodu region.">
+  <meta name="keywords" content="Ikorodu Chambers Of Commerce, Ikorodu business, Lagos commerce, Nigeria trade, business directory, join Ikorodu Chambers">
+  <meta name="author" content="Elujoba Oluwaseyi Ebenezer">
+ 
+  <!-- styles -->
+  <link rel="stylesheet" href="styles/discover.css">
+    <!-- favicon -->
+  <link rel="icon" href="images/ikd.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <!-- social media meta -->
+  <meta property="og:title" content="Ikorodu Chambers Of Commerce | Lagos, Nigeria">
+  <meta property="og:description" content="Ikorodu Chambers Of Commerce is a leading business organization in Lagos, Nigeria, dedicated to promoting trade and commerce in the Ikorodu region.">
+  <meta property="og:image" content="https://oedesign.github.io/wdd231/images/ikd-logo.webp">
+  <meta property="og:url" content="https://ikoroduchambers.com">
+  <meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+  <!-- Preserve header/navigation/footer per assignment -->
+  <header>
+    <div class="logo">
+      <a href="index.html"><img src="images/ikd-logo.webp" alt="Ikorodu Chambers Of Commerce Logo" width="120"></a>
+    </div>
+    <div class="entityIcon">
+      <button id="darkLightMode" aria-label="Toggle dark/light mode">🌙</button>
+      <button id="hamburgerMenu" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <nav class="topNav" aria-label="Main navigation">
+    <ul id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="directory.html">Directory</a></li>
+      <li><a href="discover.html">Discover</a></li>
+      <li><a href="join.html">Join</a></li>
+    </ul>
+  </nav>
+
+  <main id="main" class="discover-main">
+    <div class="hero2">
+      <h2>Discover YourTown</h2>
+      <p class="lead">Explore the top places, attractions, and resources that make our community unique.</p>
+    </div>
+
+    <!-- Visitor message area (can be an overlay or inline) -->
+    <section id="visitMessage" class="visit-message" aria-live="polite"></section>
+
+    <!-- The grid container for the cards -->
+    <section id="placesGrid" class="places-grid" aria-label="Places of interest">
+      <!-- Cards will be inserted here by discover.js -->
+    </section>
+  </main>
+
+  <!-- module script imports data and builds cards -->
+  <script type="module" src="scripts/discover.js"></script>
+</body>
+</html>
