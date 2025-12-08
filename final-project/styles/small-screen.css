@@ -1,0 +1,178 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #1a5e3f;   /* Dark Green - headings, accents */
+  --secondary: #f2c94c; /* Warm Yellow - highlights, buttons */
+  --light: #f8f8f8;     /* Light background */
+  --dark: #222;         /* Body text */
+}
+/* header styling */
+header {
+  position: relative;
+}
+h1 {
+  display: inline-block;
+  color: var(--primary);
+}
+#hamburger {
+  float: right;
+  background-color: transparent;
+  margin-right: 15px;
+  font-size: 28px;
+  border: none;
+  color: var(--primary);
+  cursor: pointer;
+}
+nav {
+  clear: both;
+  background-color: var(--primary);
+  padding: 10px;
+  z-index: 999;
+  position: absolute;
+  width: 100%;
+  display: none;
+}
+#nav-links {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  list-style-type: none;
+}
+
+#nav-links a {
+  text-decoration: none;
+  color: var(--light);
+}
+
+nav.show {
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: var(--primary);
+}
+h2 .explore {
+  margin-top: 40px;
+}
+
+.hero-image img {
+  width: 100%;
+}
+
+/* survey section */
+.survey-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 868px;
+  gap: 20px;
+  text-align: center;
+  justify-content: center;
+}
+.surveyF, .surveyE, .surveyS, .surveyM, .surveyJ, .surveyMS {
+  padding: 10px;
+  background-color: var(--primary);
+  color: var(--light);
+  border: 1px solid ;
+  width: 250px;
+  cursor: pointer;
+  border-radius: 2px;
+  margin: 0 auto;
+
+}
+
+ .surveyFn, .surveyMw, .surveyC, .surveyR, .surveyP, .surveyG, .surveyI {
+  display: none;
+}
+
+.surveyMS {
+  background-color: var(--secondary);
+  color: var(--primary);
+}
+
+/*  */
+  .opportunities, .give-back {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    max-width: 868px;
+    margin: 0 auto;
+  }
+  .opportunities p {
+    max-width: 350px;
+    margin-top: 20px;
+    color: var(--primary);
+  }
+
+  .give-back p {
+    max-width: 350px;
+    /* margin-top: 20px; */
+    color: var(--primary);
+  }
+
+  .c-explore {
+   margin: 20px auto;
+   display: block;
+   position: relative;
+   /* top: -100px;
+   left: 160px; */
+   padding: 10px;
+   background-color: var(--primary);
+   color: white;
+   border: 1px solid;
+   cursor: pointer;
+    
+  }
+  .dnor {
+   margin: 20px auto;
+   display: block;
+   position: relative;
+   /* top: -100px;
+   left: -160px; */
+   padding: 10px;
+   background-color: var(--primary);
+   color: white;
+   border: 1px solid;
+   cursor: pointer;
+  }
+
+  footer {
+    margin-top: 20px;
+    /* text-align: center; */
+    background-color: var(--primary);
+    color: white;
+    padding: 20px;
+  }
+  .social-links {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     gap: 15px;
+  }
+  footer p {
+    text-align: center;
+    margin-top: 20px;
+  }
+  footer li {
+    padding: 5px;
+    list-style-type: none;
+  }
+  footer a {
+    color: var(--light);
+    text-decoration: none;
+  }
+
+
