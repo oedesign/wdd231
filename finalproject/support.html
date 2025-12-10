@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Support — Feed The Nation</title>
+  <meta name="description" content="Browse local food, medical, educational and job resources. Save favorites and view details." />
+  <meta name="author" content="Your Name" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="FTN Support Resources" />
+  <meta property="og:description" content="Find nearby programs for food, health, education and employment." />
+  <link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect fill='%231a5e3f' width='32' height='32'/><text x='50%' y='60%' font-size='16' font-family='Georgia,serif' fill='%23f2c94c' text-anchor='middle'>FTN</text></svg>" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Feed The Nation</a>
+      <button id="hamburger" aria-controls="main-nav" aria-expanded="false" class="hamburger" aria-label="Open menu">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+      <nav id="main-nav" class="nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="support.html" aria-current="page">Support</a></li>
+          <li><a href="donate.html">Donate</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <section class="list-controls">
+      <h1>Support Programs</h1>
+      <div class="controls-row">
+        <label for="filter">Filter by category:</label>
+        <select id="filter" aria-label="Filter programs by category">
+          <option value="all">All</option>
+        </select>
+
+        <label for="search">Search:</label>
+        <input id="search" type="search" placeholder="Search by name or address" aria-label="Search programs" />
+      </div>
+    </section>
+
+    <section id="cards" class="cards" aria-live="polite" aria-label="List of support programs">
+      <!-- dynamic items inserted here -->
+    </section>
+
+    <section class="favorites" aria-labelledby="fav-title">
+      <h2 id="fav-title">Saved Favorites</h2>
+      <ul id="favorites-list" class="fav-list"></ul>
+    </section>
+  </main>
+
+  <div id="modal-root" aria-hidden="true"></div>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Feed The Nation</p>
+      <p><a href="attributions.html">Attributions</a> · <a href="donate.html#video">Video Demo</a></p>
+    </div>
+  </footer>
+
+  <script type="module">
+    import { initNav } from './js/nav.js';
+    import { fetchPrograms, getCategories } from './js/dataModule.js';
+    import { renderPrograms, populateFilter, renderFavorites } from './js/render.js';
+    import { initModal } from './js/modal.js';
+    import { getFavorites } from './js/localstorage.js';
+
+    initNav();
+    initModal();
+
+    const year = new Date().getFullYear();
+    document.getElementById('year').textContent = year;
+
+    async function init() {
+      try {
+        const data = await fetchPrograms(); // uses try/catch inside module too
+        // populate filter
+        const cats = getCategories(data);
+        populateFilter(cats);
+
+        // initial render: first 15 (data length is 15)
+        renderPrograms(data.slice(0, 50)); // safe slice
+
+        // wire up filter/search
+        document.getElementById('filter').addEventListener('change', (e) => {
+          const category = e.target.value;
+          const searchTerm = document.getElementById('search').value.trim().toLowerCase();
+          let filtered = data;
+          if (category !== 'all') filtered = data.filter(d => d.category === category);
+          if (searchTerm) filtered = filtered.filter(d => (d.name + ' ' + d.address).toLowerCase().includes(searchTerm));
+          renderPrograms(filtered);
+        });
+
+        document.getElementById('search').addEventListener('input', (e) => {
+          const searchTerm = e.target.value.trim().toLowerCase();
+          const category = document.getElementById('filter').value;
+          let filtered = data;
+          if (category !== 'all') filtered = data.filter(d => d.category === category);
+          if (searchTerm) filtered = filtered.filter(d => (d.name + ' ' + d.address).toLowerCase().includes(searchTerm));
+          renderPrograms(filtered);
+        });
+
+        // favorites display
+        renderFavorites(getFavorites(), data);
+      } catch (err) {
+        console.error('Init error:', err);
+        const cards = document.getElementById('cards');
+        cards.innerHTML = '<p class="error">Sorry — unable to load resources right now.</p>';
+      }
+    }
+
+    init();
+  </script>
+  <script type="module" src="js/localstorage.js"></script>
+  <script type="module" src="js/render.js"></script>
+  <script type="module" src="js/dataModule.js"></script>
+  <script type="module" src="js/modal.js"></script>
+</body>
+</html>

@@ -1,3 +1,4 @@
+// hamgurger menu for small screen view
 const hamburger = document.getElementById("hamburger");
 const navigation = document.getElementById("navigation");
 
@@ -11,3 +12,7 @@ const navigation = document.getElementById("navigation");
         hamburger.innerHTML = "☰";
         }
     });
+
+
+// Text Automatic display
+

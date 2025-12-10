@@ -40,12 +40,10 @@
   }
 
   /* Main page for large screen view */
-  /* here section */
-  .hero-image {
-    position: relative;
-  }
-  .hero-image img {
-    width: 100%;
+  
+  .hero-image{
+    background-image: url(../images/banner.jpg);
+    height: 500px;
   }
   
   /* survey section */

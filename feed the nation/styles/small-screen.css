@@ -64,8 +64,13 @@ h2 .explore {
   margin-top: 40px;
 }
 
-.hero-image img {
+.hero-image{
+  background-image: url(../images/banner.jpg);
+  height: 200px;
   width: 100%;
+  background-size: cover;
+  background-position: center;
+
 }
 
 /* survey section */
