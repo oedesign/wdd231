@@ -2,68 +2,169 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Feed The Nation — Home</title>
-  <meta name="description" content="Feed The Nation — a resource hub for food, education, medical care, jobs and community support.">
-  <meta name="author" content="Your Name" >
+  <meta name="description" content="Feed The Nation — find food assistance, education, medical care, and job opportunities in your community. Volunteer and donate to help others." />
+  <meta name="author" content="Feed The Nation" />
   <!-- Open Graph -->
-  <meta property="og:title" content="Feed The Nation">
-  <meta property="og:description" content="Find food assistance, job training, medical clinics and ways to help your community.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'&gt;&lt;rect width='100%' height='100%' fill='%231a5e3f' /&gt;&lt;text x='50%' y='55%' font-size='28' font-family='Georgia,serif' fill='%23f8f8f8' text-anchor='middle'&gt;FTN&lt;/text&gt;&lt;/svg&gt;">
-  <!-- favicon inline SVG data URL -->
-  <link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect fill='%231a5e3f' width='32' height='32'/><text x='50%' y='60%' font-size='16' font-family='Georgia,serif' fill='%23f2c94c' text-anchor='middle'>FTN</text></svg>">
-  <link rel="stylesheet" href="styles/styles.css">
+  <meta property="og:title" content="Feed The Nation (FTN)" />
+  <meta property="og:description" content="A community hub connecting people to food, education, healthcare, and jobs — and pathways to help through donations and volunteering." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630'%3E%3Crect width='100%25' height='100%25' fill='%231a5e3f'/%3E%3Ctext x='50%25' y='50%25' fill='%23fff' font-size='48' text-anchor='middle' font-family='Georgia, serif'%3EFeed%20The%20Nation%3C/text%3E%3C/svg%3E" />
+  <!-- Favicon (small SVG data URI) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%231a5e3f'/%3E%3Cpath d='M30 60 L50 30 L70 60 Z' fill='%23f2c94c'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="styles/styles.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html">Feed The Nation</a>
-      <button id="hamburger" aria-controls="main-nav" aria-expanded="false" class="hamburger" aria-label="Open menu">
-        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-      </button>
-      <nav id="main-nav" class="nav" aria-label="Main navigation">
-        <ul>
-          <li><a href="index.html" aria-current="page">Home</a></li>
-          <li><a href="support.html">Support</a></li>
-          <li><a href="donate.html">Donate</a></li>
+  <header class="site-header" role="banner">
+    <div class="topbar">
+      <div class="brand">
+        <a href="index.html" class="logo" aria-label="Feed The Nation Home">
+          <svg width="36" height="36" viewBox="0 0 100 100" aria-hidden="true">
+            <rect width="100" height="100" fill="#1a5e3f"></rect>
+            <path d="M30 60 L50 30 L70 60 Z" fill="#f2c94c"></path>
+          </svg>
+          <span class="site-title">Feed The Nation</span>
+        </a>
+      </div>
+
+      <nav class="main-nav" role="navigation" aria-label="Main Navigation">
+        <button class="hamburger" aria-expanded="false" aria-controls="nav-list" aria-label="Menu">
+          <span class="hamburger-lines"></span>
+        </button>
+        <ul id="nav-list" class="nav-list">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="form-action.html">Form Data</a></li>
         </ul>
       </nav>
     </div>
+
+    <div class="hero">
+      <div class="hero-inner">
+        <h1>Feed The Nation</h1>
+        <p class="lead">Support for food access, education, medical care, job training and community upliftment.</p>
+        <div class="hero-cta">
+          <a class="btn primary" href="#services">Find Help Near You</a>
+          <a class="btn secondary" href="resources.html">Donate / Volunteer</a>
+        </div>
+      </div>
+      <div class="hero-image" aria-hidden="true">
+        <!-- decorative, lazy loaded -->
+        <svg width="600" height="200" viewBox="0 0 600 200" class="decor" role="img" focusable="false">
+          <rect width="600" height="200" fill="#e9efe9" />
+          <g fill="#cfd9cf">
+            <circle cx="520" cy="60" r="20"></circle>
+            <path d="M80 140 q40 -60 120 -30 q80 -30 120 30" fill="#cfd9cf"></path>
+          </g>
+        </svg>
+      </div>
+    </div>
   </header>
 
-  <main id="main" class="container">
-    <section class="hero" aria-labelledby="hero-title">
-      <h1 id="hero-title">Feed The Nation</h1>
-      <p class="tagline">Helping individuals and families access food, education, medical care, and job opportunities.</p>
-      <p><a class="btn primary" href="support.html">Find Support</a> <a class="btn" href="donate.html">Donate / Help</a></p>
+  <main id="main" class="site-main" role="main">
+    <section class="intro">
+      <h2>How FTN helps</h2>
+      <p>Search services for food, healthcare, education, job training, and child support. Volunteer or donate to support local communities.</p>
     </section>
 
-    <section class="intro" aria-labelledby="intro-title">
-      <h2 id="intro-title">Our Mission</h2>
-      <p>Feed The Nation (FTN) connects people to essentials and empowers communities to thrive.</p>
+    <section id="services" class="services">
+      <h3>Community Services</h3>
+      <p class="muted">Browse local programs and support providers — click a card for details or mark favorites.</p>
+
+      <div id="services-list" class="cards" aria-live="polite">
+        <!-- dynamic content inserted here -->
+      </div>
+
+      <div class="services-controls">
+        <label for="filter" class="sr-only">Filter services</label>
+        <select id="filter" name="filter" aria-label="Filter services">
+          <option value="all">All categories</option>
+          <option value="Food">Food</option>
+          <option value="Education">Education</option>
+          <option value="Healthcare">Healthcare</option>
+          <option value="Jobs">Jobs</option>
+          <option value="Child Support">Child Support</option>
+        </select>
+
+        <button id="show-favorites" class="btn">Show Favorites</button>
+        <button id="clear-favorites" class="btn ghost">Clear Favorites</button>
+      </div>
     </section>
 
-    <section class="highlights" aria-labelledby="highlights-title">
-      <h2 id="highlights-title">What we cover</h2>
-      <ul class="grid-3">
-        <li><strong>Food Assistance</strong><p>Local food pantries and meal programs.</p></li>
-        <li><strong>Medical Support</strong><p>Clinics, free screenings and referrals.</p></li>
-        <li><strong>Job & Training</strong><p>Career resources and skill-building.</p></li>
-      </ul>
+    <section class="cta-grid">
+      <div class="cta">
+        <h4>Donate Food</h4>
+        <p>Find drop-off sites or schedule a pickup to help families today.</p>
+        <a class="btn primary" href="resources.html#donate">Donate</a>
+      </div>
+      <div class="cta">
+        <h4>Volunteer</h4>
+        <p>Join a local program to distribute food or teach skills.</p>
+        <a class="btn secondary" href="resources.html#volunteer">Volunteer</a>
+      </div>
+      <div class="cta">
+        <h4>Take the FTN Survey</h4>
+        <p>Tell us what help you need so we can connect you to services.</p>
+        <a class="btn" href="resources.html#survey">Survey</a>
+      </div>
+    </section>
+
+    <section class="about-preview">
+      <article>
+        <h3>Our Mission</h3>
+        <p>Feed The Nation connects neighbors to essential resources by matching local programs with those who need help and those who want to help.</p>
+        <a href="about.html" class="btn">Learn More</a>
+      </article>
+      <aside aria-hidden="true">
+        <svg width="320" height="200" viewBox="0 0 320 200" class="card-art">
+          <rect width="320" height="200" fill="#f3f7f3"></rect>
+          <circle cx="250" cy="60" r="18" fill="#c6d8c6"></circle>
+          <rect x="40" y="60" width="180" height="80" rx="8" fill="#c6d8c6"></rect>
+        </svg>
+      </aside>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>&copy; <span id="year"></span> Feed The Nation</p>
-      <p><a href="attributions.html">Attributions</a> · <a href="donate.html#video">Video Demo</a></p>
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <h4>Feed The Nation</h4>
+        <p class="muted">© <span id="year"></span> Feed The Nation. All rights reserved.</p>
+        <p><a href="resources.html#video">Project video & demo</a></p>
+      </div>
+
+      <div class="footer-columns">
+        <div>
+          <h5>Get Help</h5>
+          <ul>
+            <li><a href="#services">Find Food</a></li>
+            <li><a href="#services">Medical</a></li>
+            <li><a href="#services">Job Training</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Give</h5>
+          <ul>
+            <li><a href="resources.html#donate">Donate Money</a></li>
+            <li><a href="resources.html#volunteer">Volunteer</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Attributions</h5>
+          <ul>
+            <li><a href="about.html#attributions">Resources & credits</a></li>
+            <li><a href="form-action.html">Form data page</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
   </footer>
 
-  <script type="module" src="scripts/nav.js"></script>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <!-- Modal root -->
+  <div id="modal-root" aria-hidden="true"></div>
+
+  <script type="module" src="scripts/main.js"></script>
 </body>
 </html>

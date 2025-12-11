@@ -1,70 +1,57 @@
-// modal.js - accessible modal creation and management
-export function initModal() {
-  // nothing to init here yet; modal root used by render
-}
+// scripts/modal.js
+// Accessible Modal creation and management. Exports showModal and closeModal.
 
-export function openModal(program) {
-  const modalRoot = document.getElementById('modal-root');
-  modalRoot.innerHTML = '';
+export function showModal({title = '', content = '', onClose = () => {}} = {}) {
+  const root = document.getElementById('modal-root');
+  if (!root) return;
 
-  const overlay = document.createElement('div');
-  overlay.className = 'modal-overlay';
-  overlay.setAttribute('role', 'dialog');
-  overlay.setAttribute('aria-modal', 'true');
+  // create backdrop
+  const backdrop = document.createElement('div');
+  backdrop.className = 'modal-backdrop';
+  backdrop.setAttribute('role', 'dialog');
+  backdrop.setAttribute('aria-modal', 'true');
 
+  // trap focus — simple implementation
   const modal = document.createElement('div');
   modal.className = 'modal';
-  modal.tabIndex = -1;
-
   modal.innerHTML = `
-    <button class="close-modal" aria-label="Close dialog" style="float:right">✕</button>
-    <div class="media">
-      <img src="${program.image}" alt="${escapeHtml(program.name)} image" loading="lazy"/>
-      <div>
-        <h3>${escapeHtml(program.name)}</h3>
-        <p><strong>Category:</strong> ${escapeHtml(program.category)}</p>
-        <p><strong>Address:</strong> ${escapeHtml(program.address)}</p>
-        <p><strong>Hours:</strong> ${escapeHtml(program.hours)}</p>
-        <p>${escapeHtml(program.description)}</p>
-        <p><strong>Contact:</strong> ${escapeHtml(program.contact)}</p>
-        <div class="actions">
-          <button id="saveFav" class="btn">Save</button>
-          <a class="btn primary" href="donate.html?prefill=${encodeURIComponent(program.name)}#video">Donate / Help</a>
-        </div>
-      </div>
-    </div>
+    <header>
+      <h2 style="margin:0;font-family:Georgia, serif;">${escapeHtml(title)}</h2>
+      <button class="close" aria-label="Close modal">&times;</button>
+    </header>
+    <div class="modal-body">${content}</div>
   `;
 
-  overlay.appendChild(modal);
-  modalRoot.appendChild(overlay);
-  modalRoot.setAttribute('aria-hidden','false');
+  backdrop.appendChild(modal);
+  root.innerHTML = '';
+  root.appendChild(backdrop);
+  root.setAttribute('aria-hidden', 'false');
 
   // focus management
-  const closeBtn = overlay.querySelector('.close-modal');
-  closeBtn.focus();
+  const closeButton = modal.querySelector('.close');
+  closeButton.focus();
 
-  // close handlers
-  function close() {
-    modalRoot.innerHTML = '';
-    modalRoot.setAttribute('aria-hidden','true');
+  function cleanup() {
+    root.innerHTML = '';
+    root.setAttribute('aria-hidden', 'true');
+    onClose();
   }
-  closeBtn.addEventListener('click', close);
-  overlay.addEventListener('click', (e) => {
-    if (e.target === overlay) close();
+
+  backdrop.addEventListener('click', (e) => {
+    if (e.target === backdrop) cleanup();
   });
+  closeButton.addEventListener('click', cleanup);
   document.addEventListener('keydown', function esc(e) {
     if (e.key === 'Escape') {
-      close();
+      cleanup();
       document.removeEventListener('keydown', esc);
     }
-  });
-
-  // save favorite wired up by render module (event delegation)
+  }, {once: true});
 }
 
-// small escape helper
-function escapeHtml(str) {
-  return String(str).replace(/[&<>"']/g, function (m) {
-    return { '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[m];
-  });
+function escapeHtml(str = '') {
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
 }

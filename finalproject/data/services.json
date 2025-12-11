@@ -1,0 +1,169 @@
+{
+  "services": [
+    {
+      "id": "s1",
+      "name": "Community Food Pantry",
+      "category": "Food",
+      "location": "Downtown",
+      "contact": "pantry@example.org",
+      "phone": "555-0101",
+      "description": "Weekly distributions of shelf-stable groceries, fresh produce, and emergency meal kits.",
+      "hours": "Tue, Thu 10:00–14:00",
+      "image": "https://picsum.photos/seed/s1/800/480"
+    },
+    {
+      "id": "s2",
+      "name": "School Lunch Program",
+      "category": "Food",
+      "location": "Eastside Schools",
+      "contact": "lunches@example.org",
+      "phone": "555-0102",
+      "description": "Free and reduced-price lunches for eligible students. Summer meal sites included.",
+      "hours": "Mon-Fri 11:00–13:30",
+      "image": "https://picsum.photos/seed/s2/800/480"
+    },
+    {
+      "id": "s3",
+      "name": "Medical Clinic — Sliding Scale",
+      "category": "Healthcare",
+      "location": "West Clinic",
+      "contact": "clinic@example.org",
+      "phone": "555-0103",
+      "description": "Primary care and referrals with sliding-scale fees and bilingual staff.",
+      "hours": "Mon-Wed 09:00–16:00",
+      "image": "https://picsum.photos/seed/s3/800/480"
+    },
+    {
+      "id": "s4",
+      "name": "Adult Education Center",
+      "category": "Education",
+      "location": "Central Library",
+      "contact": "education@example.org",
+      "phone": "555-0104",
+      "description": "Free classes for GED preparation, ESL, and digital literacy.",
+      "hours": "Tue, Thu 17:30–20:00",
+      "image": "https://picsum.photos/seed/s4/800/480"
+    },
+    {
+      "id": "s5",
+      "name": "Career Placement Services",
+      "category": "Jobs",
+      "location": "Workforce Center",
+      "contact": "jobs@example.org",
+      "phone": "555-0105",
+      "description": "Resume assistance, interview prep, and employer connections.",
+      "hours": "Mon-Fri 08:30–16:30",
+      "image": "https://picsum.photos/seed/s5/800/480"
+    },
+    {
+      "id": "s6",
+      "name": "Mobile Pantry — Neighborhoods",
+      "category": "Food",
+      "location": "Multiple neighborhoods",
+      "contact": "mobile@example.org",
+      "phone": "555-0106",
+      "description": "Weekly mobile pantry visits, fresh produce and bread.",
+      "hours": "Sat 09:00–12:00",
+      "image": "https://picsum.photos/seed/s6/800/480"
+    },
+    {
+      "id": "s7",
+      "name": "Child Support Help Center",
+      "category": "Child Support",
+      "location": "Family Services",
+      "contact": "childsupport@example.org",
+      "phone": "555-0107",
+      "description": "Assistance with child support applications and referrals.",
+      "hours": "By appointment",
+      "image": "https://picsum.photos/seed/s7/800/480"
+    },
+    {
+      "id": "s8",
+      "name": "Youth Tutoring Program",
+      "category": "Education",
+      "location": "Community Center",
+      "contact": "tutoring@example.org",
+      "phone": "555-0108",
+      "description": "After-school tutoring and mentoring for K-12 students.",
+      "hours": "Mon-Fri 15:00–18:00",
+      "image": "https://picsum.photos/seed/s8/800/480"
+    },
+    {
+      "id": "s9",
+      "name": "Senior Meals Program",
+      "category": "Food",
+      "location": "Northside Center",
+      "contact": "seniormeals@example.org",
+      "phone": "555-0109",
+      "description": "Home-delivered and congregate meals for seniors; eligibility assistance available.",
+      "hours": "Mon-Fri 10:00–14:00",
+      "image": "https://picsum.photos/seed/s9/800/480"
+    },
+    {
+      "id": "s10",
+      "name": "Mental Health Referral Service",
+      "category": "Healthcare",
+      "location": "Behavioral Health",
+      "contact": "mentalhealth@example.org",
+      "phone": "555-0110",
+      "description": "Referrals to counseling, crisis hotlines, and support groups.",
+      "hours": "24/7 phone intake",
+      "image": "https://picsum.photos/seed/s10/800/480"
+    },
+    {
+      "id": "s11",
+      "name": "Job Fair & Training",
+      "category": "Jobs",
+      "location": "Expo Hall",
+      "contact": "jobfair@example.org",
+      "phone": "555-0111",
+      "description": "Monthly job fairs with on-site interviews and training workshops.",
+      "hours": "First Thursday of month",
+      "image": "https://picsum.photos/seed/s11/800/480"
+    },
+    {
+      "id": "s12",
+      "name": "SNAP Enrollment Help",
+      "category": "Food",
+      "location": "Benefits Office",
+      "contact": "snap@example.org",
+      "phone": "555-0112",
+      "description": "In-person help with SNAP applications and recertifications.",
+      "hours": "Mon-Fri 09:00–15:00",
+      "image": "https://picsum.photos/seed/s12/800/480"
+    },
+    {
+      "id": "s13",
+      "name": "Clothing & Essentials Bank",
+      "category": "Food",
+      "location": "Resource Hub",
+      "contact": "clothing@example.org",
+      "phone": "555-0113",
+      "description": "Free clothing, hygiene kits and household essentials for families in need.",
+      "hours": "Wed 10:00–14:00",
+      "image": "https://picsum.photos/seed/s13/800/480"
+    },
+    {
+      "id": "s14",
+      "name": "Domestic Support Services",
+      "category": "Child Support",
+      "location": "Family Law Center",
+      "contact": "domestic@example.org",
+      "phone": "555-0114",
+      "description": "Legal advice, mediation, and support referrals for families.",
+      "hours": "By appointment",
+      "image": "https://picsum.photos/seed/s14/800/480"
+    },
+    {
+      "id": "s15",
+      "name": "Nutrition Workshops",
+      "category": "Education",
+      "location": "Health Center",
+      "contact": "nutrition@example.org",
+      "phone": "555-0115",
+      "description": "Cooking classes, budgeting for healthy meals, and nutrition education.",
+      "hours": "Monthly - check site",
+      "image": "https://picsum.photos/seed/s15/800/480"
+    }
+  ]
+}
