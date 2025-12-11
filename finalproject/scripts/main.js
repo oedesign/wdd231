@@ -1,4 +1,22 @@
 // scripts/main.js
+
+/**
+ * Main Application Script
+ * -----------------------
+ * Handles all client-side interactions across the Feed The Nation website.
+ * Responsibilities include:
+ * - Initializing navigation menus and global UI controls
+ * - Loading, filtering, and rendering service listings dynamically
+ * - Managing user favorites via localStorage
+ * - Saving and displaying user-submitted video links
+ * - Implementing lazy-loading for service images
+ * - Handling modal dialogs for detailed service views
+ * 
+ * This script orchestrates the major user-facing behaviors to ensure
+ * a responsive, accessible, and data-driven browsing experience.
+ */
+
+
 import { fetchServices } from './data.js';
 import { showModal } from './modal.js';
 

@@ -1,4 +1,20 @@
 // scripts/modal.js
+
+/**
+ * Modal Component Script
+ * ----------------------
+ * Provides a reusable, accessible modal dialog system for the website.
+ * Core responsibilities include:
+ * - Rendering modal content dynamically with a title and body
+ * - Managing open/close behavior using backdrop clicks, close buttons, and the Escape key
+ * - Ensuring proper ARIA attributes for accessibility and keyboard navigation
+ * - Allowing callback execution when a modal is closed
+ *
+ * This module delivers a clean and flexible modal experience that integrates
+ * seamlessly with other UI components across the application.
+ */
+
+
 export function showModal({ title = '', content = '', onClose = () => {} } = {}) {
   const root = document.getElementById('modal-root');
   if (!root) return;
