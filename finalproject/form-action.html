@@ -1,35 +1,33 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Feed The Nation — Home</title>
-  <meta name="description" content="Feed The Nation — find food assistance, education, medical care, and job opportunities in your community. Volunteer and donate to help others." />
-  <meta name="author" content="Feed The Nation" />
-  <!-- social media meta -->
-  <meta property="og:title" content="Feed The Nation (FTN)" >
-  <meta property="og:description" content="A community hub connecting people to food, education, healthcare, and jobs — and pathways to help through donations and volunteering." >
-  <meta property="og:image" content="https://oedesign.github.io/wdd231/images/">
-  <meta property="og:url" content="https://feedthenation.com">
-  <meta name="twitter:card" content="summary_large_image">
-  <!-- Favicon (small SVG data URI) -->
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%231a5e3f'/%3E%3Cpath d='M30 60 L50 30 L70 60 Z' fill='%23f2c94c'/%3E%3C/svg%3E" />
-  <link rel="stylesheet" href="styles/styles.css" />
-  <link rel="stylesheet" href="styles/small-screen.css">
-  <!-- google fonts -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Data — FTN</title>
+  <meta name="description" content="Form action page that displays submitted FTN survey data.">
+  <meta name="author" content="Student Name">
+
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Georgia&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <meta property="og:title" content="FTN — Submitted Form Data">
+  <meta property="og:description" content="Displays submitted FTN survey data via URLSearchParams.">
+  <meta property="og:image" content="images/og-about.svg">
+  <meta property="og:url" content="https://example.com/form-action.html">
+  <meta property="og:type" content="website">
+
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
   <header class="site-header">
-    <div class="topbar">
+    <div class="topbar container">
       <div class="brand">
         <a href="index.html" class="logo" aria-label="Feed The Nation Home">
-          <svg width="36" height="36" viewBox="0 0 100 100" aria-hidden="true">
-            <rect width="100" height="100" fill="#1a5e3f"></rect>
-            <path d="M30 60 L50 30 L70 60 Z" fill="#f2c94c"></path>
-          </svg>
+          <img src="images/favicon.svg" alt="" width="36" height="36" aria-hidden="true">
           <span class="site-title">Feed The Nation</span>
         </a>
       </div>
@@ -47,7 +45,7 @@
     </div>
   </header>
 
-  <main class="site-main narrow">
+  <main class="site-main narrow container">
     <h1>Submitted Form Data</h1>
     <p class="muted">This page displays the survey data passed in the query string (URLSearchParams).</p>
 
@@ -59,7 +57,6 @@
   </main>
 
   <script>
-    // form action display logic (not an ES module so it works standalone)
     (function () {
       const params = new URLSearchParams(window.location.search);
       const output = document.getElementById('form-output');
@@ -85,6 +82,6 @@
     })();
   </script>
 
-  <link rel="stylesheet" href="styles/styles.css" />
+  <link rel="stylesheet" href="styles/styles.css">
 </body>
 </html>

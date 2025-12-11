@@ -1,7 +1,4 @@
 // scripts/main.js
-// Entry point. Uses ES modules for data and modal.
-// Updated: progressive lazy-loading for real image URLs (data-src + IntersectionObserver)
-
 import { fetchServices } from './data.js';
 import { showModal } from './modal.js';
 
@@ -20,11 +17,8 @@ async function init() {
   restoreVideoDisplay();
 }
 
-/* --- Basic UI setup --- */
 function setYears() {
-  document.querySelectorAll('#year, #year2, #year3').forEach(el => {
-    el.textContent = new Date().getFullYear();
-  });
+  document.querySelectorAll('#year, #year2, #year3').forEach(el => el.textContent = new Date().getFullYear());
 }
 
 function setupNav() {
@@ -37,14 +31,11 @@ function setupNav() {
       else list.classList.remove('show');
     });
   });
-
-  document.querySelectorAll('.nav-list a').forEach(a => {
-    a.addEventListener('click', () => {
-      const list = document.getElementById('nav-list');
-      if (list) list.classList.remove('show');
-      document.querySelectorAll('.hamburger').forEach(h => h.setAttribute('aria-expanded', 'false'));
-    });
-  });
+  document.querySelectorAll('.nav-list a').forEach(a => a.addEventListener('click', () => {
+    const list = document.getElementById('nav-list');
+    if (list) list.classList.remove('show');
+    document.querySelectorAll('.hamburger').forEach(h => h.setAttribute('aria-expanded', 'false'));
+  }));
 }
 
 function setupControls() {
@@ -90,7 +81,6 @@ function restoreVideoDisplay() {
   }
 }
 
-/* --- Load + render services --- */
 async function loadAndRenderServices() {
   const listEl = document.getElementById('services-list');
   if (!listEl) return;
@@ -100,11 +90,8 @@ async function loadAndRenderServices() {
     const services = await fetchServices(SERVICES_JSON);
     const filterVal = document.getElementById('filter')?.value || 'all';
     let visible = services;
-    if (filterVal && filterVal !== 'all') {
-      visible = services.filter(s => s.category === filterVal);
-    }
+    if (filterVal && filterVal !== 'all') visible = services.filter(s => s.category === filterVal);
     renderServiceCards(visible);
-    // kick off lazy image observer after render
     lazyInit();
   } catch (err) {
     console.error(err);
@@ -118,38 +105,24 @@ function renderServiceCards(items) {
   const favorites = getFavorites();
   const fragment = document.createDocumentFragment();
 
-  // Limit items to first 40 for performance; this dataset has 15
   items.slice(0, 40).forEach(item => {
     const card = document.createElement('article');
     card.className = 'card';
     card.setAttribute('data-id', item.id);
 
-    // Placeholder tiny inline SVG — shows a neutral low-weight placeholder
-    const placeholder = `data:image/svg+xml;utf8,${encodeURIComponent(
-      `<svg xmlns='http://www.w3.org/2000/svg' width='400' height='240'><rect width='100%' height='100%' fill='#efefef'/><text x='50%' y='50%' font-size='18' fill='#b0b0b0' text-anchor='middle' font-family='Arial'>Loading image…</text></svg>`
-    )}`;
+    const placeholder = `data:image/svg+xml;utf8,${encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' width='400' height='240'><rect width='100%' height='100%' fill='#efefef'/><text x='50%' y='50%' font-size='18' fill='#b0b0b0' text-anchor='middle' font-family='Arial'>Loading image…</text></svg>`)}`;
 
     const img = document.createElement('img');
     img.alt = `${item.name} image`;
     img.loading = 'lazy';
-    // Start with placeholder to keep layout stable
     img.src = placeholder;
     img.width = 400;
     img.height = 240;
-    // set real URL into data-src for progressive lazy load
     img.dataset.src = item.image || '';
-    // optional srcset for higher-density displays / responsive widths
-    // we generate a simple srcset with 400 and 800 widths (picsum supports size variations)
-    if (item.image) {
-      try {
-        // If image is picsum seed with /800/480, create 400 and 800 variants
-        const src400 = item.image.replace(/\/(\d+)\/(\d+)$/, '/400/240');
-        const src800 = item.image.replace(/\/(\d+)\/(\d+)$/, '/800/480');
-        img.dataset.srcset = `${src400} 400w, ${src800} 800w`;
-      } catch (e) {
-        // ignore if replace fails; dataset remains empty
-      }
-    }
+
+    const src400 = item.image ? item.image.replace(/\/(\d+)\/(\d+)$/, '/400/240') : '';
+    const src800 = item.image ? item.image.replace(/\/(\d+)\/(\d+)$/, '/800/480') : '';
+    if (src400 && src800) img.dataset.srcset = `${src400} 400w, ${src800} 800w`;
 
     const title = document.createElement('h4');
     title.textContent = item.name;
@@ -168,9 +141,7 @@ function renderServiceCards(items) {
     detailsBtn.className = 'btn';
     detailsBtn.textContent = 'Details';
     detailsBtn.setAttribute('aria-haspopup', 'dialog');
-    detailsBtn.addEventListener('click', () => {
-      openDetailsModal(item);
-    });
+    detailsBtn.addEventListener('click', () => openDetailsModal(item));
 
     const favBtn = document.createElement('button');
     favBtn.className = 'btn ghost';
@@ -200,12 +171,10 @@ function renderServiceCards(items) {
   root.appendChild(fragment);
 }
 
-/* --- IntersectionObserver lazy loader --- */
 let lazyObserver = null;
 
 function lazyInit() {
   const lazyImages = Array.from(document.querySelectorAll('img[data-src]'));
-
   if ('IntersectionObserver' in window) {
     lazyObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -215,11 +184,9 @@ function lazyInit() {
           lazyObserver.unobserve(img);
         }
       });
-    }, {rootMargin: '200px 0px', threshold: 0.01});
-
+    }, { rootMargin: '200px 0px', threshold: 0.01 });
     lazyImages.forEach(img => lazyObserver.observe(img));
   } else {
-    // Fallback: load all immediately
     lazyImages.forEach(img => loadImg(img));
   }
 }
@@ -230,16 +197,10 @@ function loadImg(img) {
   const srcset = img.dataset.srcset;
   if (srcset) img.setAttribute('srcset', srcset);
   if (src) img.src = src;
-  img.addEventListener('error', () => {
-    // keep placeholder on error; optional: set fallback url
-    img.classList.add('img-failed');
-  });
-  img.addEventListener('load', () => {
-    img.classList.add('img-loaded');
-  });
+  img.addEventListener('error', () => img.classList.add('img-failed'));
+  img.addEventListener('load', () => img.classList.add('img-loaded'));
 }
 
-/* --- Modal detail view --- */
 function openDetailsModal(item) {
   const content = `
     <p><strong>Category:</strong> ${escapeHtml(item.category)}</p>
@@ -249,14 +210,9 @@ function openDetailsModal(item) {
     <p><strong>Description:</strong> ${escapeHtml(item.description)}</p>
     <p><a href="mailto:${escapeAttr(item.contact)}">Contact ${escapeHtml(item.contact)}</a></p>
   `;
-  showModal({
-    title: item.name,
-    content,
-    onClose: () => {}
-  });
+  showModal({ title: item.name, content, onClose: () => {} });
 }
 
-/* --- Local Storage (favorites) --- */
 function getFavorites() {
   try {
     const raw = localStorage.getItem(FAVORITES_KEY);
@@ -265,22 +221,14 @@ function getFavorites() {
     return [];
   }
 }
-
-function setFavorites(arr) {
-  localStorage.setItem(FAVORITES_KEY, JSON.stringify(arr));
-}
-
+function setFavorites(arr) { localStorage.setItem(FAVORITES_KEY, JSON.stringify(arr)); }
 function toggleFavorite(id) {
   const favs = getFavorites();
   const idx = favs.indexOf(id);
-  if (idx === -1) {
-    favs.push(id);
-  } else {
-    favs.splice(idx, 1);
-  }
+  if (idx === -1) favs.push(id);
+  else favs.splice(idx, 1);
   setFavorites(favs);
 }
-
 function showOnlyFavorites() {
   const favs = getFavorites();
   if (!favs.length) {
@@ -290,23 +238,21 @@ function showOnlyFavorites() {
   fetchServices(SERVICES_JSON).then(all => {
     const filtered = all.filter(s => favs.includes(s.id));
     renderServiceCards(filtered);
-    lazyInit(); // re-init lazy loader for new images
+    lazyInit();
   }).catch(err => {
     console.error(err);
     alert('Could not load services.');
   });
 }
-
 function clearFavorites() {
   if (!confirm('Clear all favorites?')) return;
   setFavorites([]);
   loadAndRenderServices();
 }
 
-/* --- Helpers --- */
 function escapeHtml(str = '') {
   return String(str).replace(/[&<>"']/g, function (m) {
-    return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]);
+    return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[m]);
   });
 }
 function escapeAttr(str = '') {

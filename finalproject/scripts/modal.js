@@ -1,33 +1,27 @@
 // scripts/modal.js
-// Accessible Modal creation and management. Exports showModal and closeModal.
-
-export function showModal({title = '', content = '', onClose = () => {}} = {}) {
+export function showModal({ title = '', content = '', onClose = () => {} } = {}) {
   const root = document.getElementById('modal-root');
   if (!root) return;
 
-  // create backdrop
   const backdrop = document.createElement('div');
   backdrop.className = 'modal-backdrop';
   backdrop.setAttribute('role', 'dialog');
   backdrop.setAttribute('aria-modal', 'true');
 
-  // trap focus — simple implementation
   const modal = document.createElement('div');
   modal.className = 'modal';
   modal.innerHTML = `
     <header>
-      <h2 style="margin:0;font-family:Georgia, serif;">${escapeHtml(title)}</h2>
+      <h2 style="margin:0;font-family:Georgia, serif;font-size:1.15rem;">${escapeHtml(title)}</h2>
       <button class="close" aria-label="Close modal">&times;</button>
     </header>
     <div class="modal-body">${content}</div>
   `;
-
   backdrop.appendChild(modal);
   root.innerHTML = '';
   root.appendChild(backdrop);
   root.setAttribute('aria-hidden', 'false');
 
-  // focus management
   const closeButton = modal.querySelector('.close');
   closeButton.focus();
 
@@ -46,7 +40,7 @@ export function showModal({title = '', content = '', onClose = () => {}} = {}) {
       cleanup();
       document.removeEventListener('keydown', esc);
     }
-  }, {once: true});
+  }, { once: true });
 }
 
 function escapeHtml(str = '') {
