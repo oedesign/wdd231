@@ -2,6 +2,13 @@
    Extra small-screen specific rules (keeps separate file to satisfy validator)
 */
 @media (max-width:480px) {
+  body {
+    font-family: 'Inter', sans-serif; /* Primary font */
+}
+
+h1, h2, h3 {
+    font-family: 'Georgia', serif; /* Heading font */
+}
   .hero h1 { font-size: 1.6rem; }
   .nav-list { gap: 0.4rem; }
   .card img { height: 100px; }
